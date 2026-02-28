@@ -8,13 +8,17 @@ import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { AIChatPopup } from '@/components/ai-chat-popup';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const logo = PlaceHolderImages.find(img => img.id === 'college-logo')?.imageUrl || '';
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
   description: 'Welcome to Laxmidhar Polytechnic College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
   icons: {
-    icon: logo,
+    icon: [
+      { url: logoUrl, type: 'image/png' },
+    ],
+    shortcut: logoUrl,
+    apple: logoUrl,
   },
 };
 
