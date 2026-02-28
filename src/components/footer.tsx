@@ -29,7 +29,7 @@ export function Footer() {
               <li><Link href="/programs" className="hover:text-accent transition-colors">Academic Streams</Link></li>
               <li><Link href="/admissions" className="hover:text-accent transition-colors">Enrollment Center</Link></li>
               <li><Link href="/disclosure" className="hover:text-accent transition-colors">Mandatory Disclosures</Link></li>
-              <li><Link href="/login" className="hover:text-accent transition-colors">Student Login</Link></li>
+              <li><Link href="/faq" className="hover:text-accent transition-colors">AI Support Assistant</Link></li>
             </ul>
           </div>
 

@@ -11,9 +11,7 @@ import {
   UserRound, 
   Search,
   Menu,
-  X,
-  LogIn,
-  LogOut
+  X
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -23,8 +21,6 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { useUser, useAuth } from "@/firebase";
-import { signOut } from "firebase/auth";
 
 const navItems = [
   { name: "About Us", href: "/about", icon: Info },
@@ -43,12 +39,6 @@ const deskItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const { user, isUserLoading } = useUser();
-  const auth = useAuth();
-
-  const handleSignOut = () => {
-    signOut(auth);
-  };
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
@@ -92,38 +82,6 @@ export function Navbar() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <div className="ml-4 flex items-center gap-2 border-l border-primary-foreground/20 pl-4">
-              {isUserLoading ? (
-                <div className="w-20 h-8 bg-primary-foreground/10 animate-pulse rounded" />
-              ) : user ? (
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm" className="bg-accent text-accent-foreground border-none hover:bg-accent/90">
-                      Profile
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuItem className="flex flex-col items-start gap-1 p-3">
-                      <span className="font-bold">{user.displayName || 'Student/Staff'}</span>
-                      <span className="text-xs text-muted-foreground">{user.email}</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleSignOut} className="text-destructive focus:text-destructive cursor-pointer">
-                      <LogOut className="h-4 w-4 mr-2" /> Sign Out
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <>
-                  <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-accent" asChild>
-                    <Link href="/login">Login</Link>
-                  </Button>
-                  <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-                    <Link href="/signup">Sign Up</Link>
-                  </Button>
-                </>
-              )}
-            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -170,22 +128,6 @@ export function Navbar() {
                   {item.name}
                 </Link>
               ))}
-            </div>
-            <div className="pt-4 border-t border-border space-y-2">
-              {user ? (
-                <Button variant="destructive" className="w-full" onClick={handleSignOut}>
-                  Sign Out
-                </Button>
-              ) : (
-                <div className="grid grid-cols-2 gap-2">
-                  <Button variant="outline" asChild onClick={() => setIsOpen(false)}>
-                    <Link href="/login">Login</Link>
-                  </Button>
-                  <Button className="bg-primary text-white" asChild onClick={() => setIsOpen(false)}>
-                    <Link href="/signup">Sign Up</Link>
-                  </Button>
-                </div>
-              )}
             </div>
           </div>
         </div>
