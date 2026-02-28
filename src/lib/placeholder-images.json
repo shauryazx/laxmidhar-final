@@ -9,25 +9,25 @@
     {
       "id": "engineering-lab",
       "description": "Technical engineering laboratory at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1580982172477-9373ff52ae43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbmdpbmVlcmluZyUyMGxhYnxlbnwwfHx8fDE3NzIyNjc5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580982325236-11d214b9f279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbmdpbmVlcmluZyUyMGxhYnxlbnwwfHx8fDE3NzIyNjc5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering lab"
     },
     {
       "id": "chairman-portrait",
       "description": "Chairman Mahendra Singh Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "director-portrait",
       "description": "Director Nirma Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjIwNjc5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjIwNjc5OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "principal-portrait",
       "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw8fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
@@ -39,19 +39,19 @@
     {
       "id": "mechanical-eng",
       "description": "Technical mechanical engineering blueprints and gear designs",
-      "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjYwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering blueprint"
     },
     {
       "id": "electrical-eng",
       "description": "Electrical Engineering lab equipment showing circuits and power systems",
-      "imageUrl": "https://images.unsplash.com/photo-1515630278258-407f66498911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw8fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzcyMTU5OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1515630278258-407f66498911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzcyMTU5OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "circuit board"
     },
     {
       "id": "civil-eng",
       "description": "Civil Engineering construction site and structural project management",
-      "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjI3NjM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXZpbCUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc3MjI2ODg0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "civil engineering"
     }
   ]
