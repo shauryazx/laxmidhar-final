@@ -3,20 +3,26 @@
     {
       "id": "mechanical-eng",
       "description": "Technical mechanical engineering blueprints and gear designs",
-      "imageUrl": "https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1763198302302-b4b42cf73013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering blueprint"
     },
     {
       "id": "electrical-eng",
       "description": "Electrical Engineering lab equipment showing circuits and power systems",
-      "imageUrl": "https://images.unsplash.com/photo-1515630278258-407f66498911?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzcyMTU5OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1651340550839-3b295d930048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzcyMjk5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "circuit board"
     },
     {
       "id": "civil-eng",
       "description": "Civil Engineering construction site and structural project management",
-      "imageUrl": "https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXZpbCUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc3MjI2ODg0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXZpbCUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc3MjI2ODg0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "civil engineering"
+    },
+    {
+      "id": "college-logo",
+      "description": "Official Laxmidhar Polytechnic College Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1637433496898-763a0a9ed579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2xsZWdlJTIwbG9nb3xlbnwwfHx8fDE3NzIyOTk1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "college logo"
     }
   ]
 }

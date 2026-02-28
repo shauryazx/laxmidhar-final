@@ -1,22 +1,32 @@
+
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Facebook, Twitter, Instagram, Linkedin, Smartphone, MapPin } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Footer() {
+  const logo = PlaceHolderImages.find(img => img.id === 'college-logo');
+
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* LPC Branding Section */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3 group">
-              <div className="flex flex-col text-[8px] font-black border-r border-accent/40 pr-3 leading-tight uppercase text-accent">
-                <span>Laxmidhar</span>
-                <span>Polytechnic</span>
+            <div className="flex items-center gap-3">
+              <div className="relative h-12 w-12 rounded-lg overflow-hidden border border-accent/40 bg-white">
+                {logo && (
+                  <Image
+                    src={logo.imageUrl}
+                    alt="LPC Logo"
+                    fill
+                    className="object-contain p-1"
+                  />
+                )}
               </div>
-              <div className="flex items-baseline select-none">
-                <span className="text-3xl font-black tracking-tighter text-white">L</span>
-                <span className="text-3xl font-black tracking-tighter text-accent -ml-1">P</span>
-                <span className="text-3xl font-black tracking-tighter text-white -ml-1">C</span>
+              <div className="flex flex-col leading-tight">
+                <span className="text-2xl font-black text-white">LPC</span>
+                <span className="text-[8px] font-bold text-accent uppercase tracking-tighter">Laxmidhar Polytechnic</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-background/60">

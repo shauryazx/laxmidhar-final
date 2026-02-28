@@ -1,6 +1,8 @@
+
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { 
@@ -20,6 +22,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navItems = [
   { name: "About Us", href: "/about", icon: Info },
@@ -37,22 +40,27 @@ const adminItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'college-logo');
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Stylized LPC Logo */}
-          <Link href="/" className="flex items-center gap-4 group">
-            <div className="flex flex-col text-[7px] md:text-[8px] font-black border-r border-accent/40 pr-3 leading-[1.1] uppercase text-accent/90 tracking-tighter">
-              <span>Laxmidhar</span>
-              <span>Polytechnic</span>
-              <span>College</span>
+          {/* Institutional Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-12 w-12 rounded-lg overflow-hidden border-2 border-accent/40 bg-white">
+              {logo && (
+                <Image
+                  src={logo.imageUrl}
+                  alt="LPC Logo"
+                  fill
+                  className="object-contain p-1"
+                />
+              )}
             </div>
-            <div className="flex items-baseline select-none">
-              <span className="text-3xl md:text-4xl font-black tracking-tighter text-white">L</span>
-              <span className="text-3xl md:text-4xl font-black tracking-tighter text-accent -ml-1">P</span>
-              <span className="text-3xl md:text-4xl font-black tracking-tighter text-white -ml-1">C</span>
+            <div className="flex flex-col leading-none">
+              <span className="text-xl font-black tracking-tighter text-white">LPC</span>
+              <span className="text-[8px] font-bold uppercase text-accent tracking-widest">Alwar, Rajasthan</span>
             </div>
           </Link>
 
