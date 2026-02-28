@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
+import { AIChatPopup } from '@/components/ai-chat-popup';
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <AIChatPopup />
           <Footer />
           <Toaster />
         </FirebaseClientProvider>

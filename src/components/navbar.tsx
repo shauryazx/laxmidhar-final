@@ -9,9 +9,9 @@ import {
   GraduationCap, 
   Phone, 
   UserRound, 
-  Search,
   Menu,
-  X
+  X,
+  FileText
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -26,11 +26,10 @@ const navItems = [
   { name: "About Us", href: "/about", icon: Info },
   { name: "Programs", href: "/programs", icon: GraduationCap },
   { name: "Admissions", href: "/admissions", icon: BookOpen },
-  { name: "AI Support", href: "/faq", icon: Search },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
 
-const deskItems = [
+const adminItems = [
   { name: "Chairman's Desk", href: "/desk/chairman" },
   { name: "HODs Desk", href: "/desk/hod" },
   { name: "Disclosure", href: "/disclosure" },
@@ -72,10 +71,10 @@ export function Navbar() {
                   Administration
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white text-foreground">
-                {deskItems.map((item) => (
+              <DropdownMenuContent align="end" className="bg-white text-foreground rounded-xl shadow-2xl border-none p-2">
+                {adminItems.map((item) => (
                   <DropdownMenuItem key={item.href} asChild>
-                    <Link href={item.href} className="w-full cursor-pointer">
+                    <Link href={item.href} className="w-full cursor-pointer px-4 py-2 rounded-lg hover:bg-muted font-semibold text-sm">
                       {item.name}
                     </Link>
                   </DropdownMenuItem>
@@ -100,7 +99,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white text-primary border-t border-border">
+        <div className="lg:hidden bg-white text-primary border-t border-border animate-in slide-in-from-top duration-300">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
@@ -118,7 +117,7 @@ export function Navbar() {
             ))}
             <div className="pt-4 border-t border-border">
               <span className="px-3 text-xs font-bold text-muted-foreground uppercase tracking-widest">Administrator Desks</span>
-              {deskItems.map((item) => (
+              {adminItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
