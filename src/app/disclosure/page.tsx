@@ -27,10 +27,11 @@ export default function DisclosurePage() {
               <Table>
                 <TableBody>
                   <TableRow><TableCell className="font-bold">Institute Name</TableCell><TableCell>Laxmidhar Polytechnic College</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">AICTE ID</TableCell><TableCell>1-XXXXXX-XXXX</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Affiliation</TableCell><TableCell>BTER, Rajasthan</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Address</TableCell><TableCell>1N-3 MIA RIICO, Alwar</TableCell></TableRow>
+                  <TableRow><TableCell className="font-bold">Affiliation</TableCell><TableCell>BTER Jodhpur, Rajasthan</TableCell></TableRow>
+                  <TableRow><TableCell className="font-bold">Address</TableCell><TableCell>IN-3, M.I.A., RIICO, Alwar-301030</TableCell></TableRow>
+                  <TableRow><TableCell className="font-bold">Email</TableCell><TableCell>laxmindharpoly@gmail.com</TableCell></TableRow>
                   <TableRow><TableCell className="font-bold">Chairman</TableCell><TableCell>Mahendra Singh Choudhary</TableCell></TableRow>
+                  <TableRow><TableCell className="font-bold">Reg. No.</TableCell><TableCell>13/alwar/1999</TableCell></TableRow>
                 </TableBody>
               </Table>
             </CardContent>

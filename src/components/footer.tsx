@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Smartphone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-4 text-accent">Laxmidhar Polytechnic College</h3>
             <p className="text-sm leading-relaxed text-background/70 mb-4">
               A premier institution dedicated to technical proficiency and vocational innovation in Alwar. 
-              Preparing future engineering professionals for over two decades.
+              Preparing future engineering professionals with industrial excellence.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-accent transition-colors"><Facebook className="h-5 w-5" /></Link>
@@ -50,22 +50,26 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-background/70">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent shrink-0" />
-                <span>1N-3 MIA RIICO, Near IET College, Mungaska, Alwar-301001, Rajasthan</span>
+                <span>IN-3, M.I.A., RIICO (Near Tarni Cancer Hospital), Alwar-301030 (Raj.)</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Smartphone className="h-5 w-5 text-accent shrink-0" />
+                <span>8824351992, 9799707879</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent shrink-0" />
-                <span>+91 144 1234567</span>
+                <span>0144-2941792</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
-                <span>info@laxmidharpolytechnic.ac.in</span>
+                <span>laxmindharpoly@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-xs text-background/40">
-          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. All Rights Reserved. AICTE Approved & BTER Affiliated.</p>
+          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. All Rights Reserved. AICTE Approved & BTER Affiliated. Reg. No. 13/alwar/1999.</p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview An AI-powered FAQ tool for Laxmidhar Polytechnic College Connect.
+ * @fileOverview An AI-powered FAQ tool for Laxmidhar Polytechnic College.
  *
  * - answerFaqQuestion - A function that handles answering common college-related questions.
  * - FaqQuestionInput - The input type for the answerFaqQuestion function.
@@ -11,7 +11,7 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const FaqQuestionInputSchema = z.object({
-  question: z.string().describe('The user\'s question about Laxmidhar Polytechnic College Connect.'),
+  question: z.string().describe('The user\'s question about Laxmidhar Polytechnic College.'),
 });
 export type FaqQuestionInput = z.infer<typeof FaqQuestionInputSchema>;
 
@@ -31,10 +31,13 @@ const faqPrompt = ai.definePrompt({
   prompt: `You are an expert AI assistant for Laxmidhar Polytechnic College. Your role is to provide precise information based on official college records and current admission flyers.
 
 ### Laxmidhar Polytechnic College Core Facts:
-- **Affiliation:** Approved by AICTE & Affiliated to BTER Jodhpur.
-- **Location:** 1N-3 MIA RIICO, Near IET College, Alwar (Raj.).
+- **Affiliation:** Approved by AICTE New Delhi & Affiliated to BTER Jodhpur, Rajasthan.
+- **Location:** IN-3, M.I.A., RIICO (Near Tarni Cancer Hospital), Alwar-301030 (Raj.).
 - **City Office:** S.K. Engineers Academy, Near Nehru Garden, Alwar.
-- **Contact Numbers:** 8824351992, 8890548818.
+- **Contact Numbers (Mobile):** 8824351992, 9799707879.
+- **Telephone:** 0144-2941792.
+- **Email:** laxmindharpoly@gmail.com.
+- **Registration No:** 13/alwar/1999.
 
 ### Engineering Branches:
 - **Electrical Engineering**
@@ -47,14 +50,8 @@ const faqPrompt = ai.definePrompt({
 3. **Lateral Entry:** 12th PCM and ITI holders can complete the Diploma in just 2 years.
 4. **Placement Success:** Highest Package is 10 LPA. Average Package is 3.6 LPA. 
 5. **Top Recruiters:** Havells, Suzuki, Honda, Bajaj, BHEL, Hyundai, JCB, etc.
-6. **Govt Jobs:** Graduates can participate in J.En. (Junior Engineer) recruitment exams for central and state departments.
 
-### Academic Excellence:
-- Session 2018-19: 100% Result (300 students)
-- Session 2019-20: 100% Result (157 students)
-- Session 2022-23: 98% Result (110 students)
-
-**Important Instruction:** If a user asks about dates, specify that admissions are currently open for 2024-25. Always mention the Zero Fees policy for eligible candidates.
+**Important Instruction:** If a user asks about dates, specify that admissions are currently open. Always mention the Zero Fees policy for eligible candidates and provide the correct mobile numbers.
 
 **User Question:** {{{question}}}
 

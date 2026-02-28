@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, Send, Landmark } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Landmark, Smartphone } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -27,8 +27,8 @@ export default function ContactPage() {
                   <div className="flex items-start gap-4">
                     <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><MapPin className="h-6 w-6" /></div>
                     <div>
-                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">MIA Campus</h4>
-                      <p className="font-bold text-sm leading-relaxed">1N-3 MIA RIICO, Near IET College, Alwar (Raj.)</p>
+                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Campus Address</h4>
+                      <p className="font-bold text-sm leading-relaxed">IN-3, M.I.A., RIICO (Near Tarni Cancer Hospital), Alwar-301030 (Raj.)</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -41,18 +41,25 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
+                    <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><Smartphone className="h-6 w-6" /></div>
+                    <div>
+                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Mobile Numbers</h4>
+                      <p className="font-black text-lg text-primary">8824351992</p>
+                      <p className="font-black text-lg text-primary">9799707879</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
                     <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><Phone className="h-6 w-6" /></div>
                     <div>
-                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Admissions Hotlines</h4>
-                      <p className="font-black text-lg text-primary">+91 88243 51992</p>
-                      <p className="font-black text-lg text-primary">+91 88905 48818</p>
+                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Telephone</h4>
+                      <p className="font-black text-lg text-primary">0144-2941792</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><Mail className="h-6 w-6" /></div>
                     <div>
-                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Official Email</h4>
-                      <p className="font-bold text-sm">info@laxmidharpolytechnic.ac.in</p>
+                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Email Address</h4>
+                      <p className="font-bold text-sm">laxmindharpoly@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -64,7 +71,7 @@ export default function ContactPage() {
               <div className="w-full h-full bg-muted flex flex-col items-center justify-center relative">
                 <MapPin className="h-12 w-12 text-primary mb-2 animate-bounce" />
                 <span className="font-extrabold text-xl text-primary uppercase tracking-tighter">Locate Campus</span>
-                <p className="text-sm text-muted-foreground font-bold">1N-3 MIA RIICO, Alwar</p>
+                <p className="text-sm text-muted-foreground font-bold">IN-3, M.I.A., RIICO, Alwar</p>
                 <div className="absolute inset-0 bg-primary/5" />
               </div>
             </section>
