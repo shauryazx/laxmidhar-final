@@ -1,0 +1,194 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * CORE PHILOSOPHY
+     * This ruleset implements a hybrid security model for Laxmidhar College Connect:
+     * 1. Private User Profiles: Enforces a strict owner-only access model for user data based on Firebase Auth UIDs.
+     * 2. Public Content: All academic and administrative content (Staff, Programs, News, Events) is publicly readable.
+     * 3. Database-Based Access Control (DBAC): Write access to public content is strictly restricted to users 
+     *    identified as administrators within the `/admin_roles` collection.
+     * 
+     * DATA STRUCTURE
+     * - /users/{userId}: Private user profile data.
+     * - /admin_roles/{userId}: Privileged access control list.
+     * - /{contentCollection}/{id}: Publicly readable college information.
+     * 
+     * KEY SECURITY DECISIONS
+     * - Prototyping Mode: Schema validation is omitted for flexibility, focusing strictly on authorization.
+     * - Path-Based Authorization: User data is secured by matching the document ID to the requester's UID.
+     * - Existence Checks: All update and delete operations require the document to exist before processing.
+     * - Centralized Admin Check: A global `isAdmin()` helper facilitates administrative write permissions across multiple collections.
+     */
+
+    // --- HELPER FUNCTIONS ---
+
+    /** @description Checks if the user is authenticated. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** @description Checks if the authenticated user's UID matches the provided userId. */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /** @description Checks if a user profile exists and belongs to the requester. */
+    function isExistingOwner(userId) {
+      return resource != null && isOwner(userId);
+    }
+
+    /** @description Checks if the requester has a record in the admin_roles collection. */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
+    }
+
+    /** @description Checks if the document exists and the requester is an admin. */
+    function isExistingAdmin() {
+      return resource != null && isAdmin();
+    }
+
+    // --- COLLECTION RULES ---
+
+    /**
+     * @description Stores individual user profiles. Access restricted to the owner for privacy.
+     * @path /users/{userId}
+     * @allow (get, list, create, update, delete) if request.auth.uid == userId
+     * @deny (get) if request.auth.uid != userId
+     * @principle Enforces path-based ownership for private user data and ensures identity consistency.
+     */
+    match /users/{userId} {
+      allow get, list: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Database Access Control (DBAC) list for administrative privileges.
+     * @path /admin_roles/{userId}
+     * @allow (get, list, create, update, delete) if requester is already an admin.
+     * @deny (all) for non-admin users.
+     * @principle Restricts management of administrative roles to existing administrators.
+     */
+    match /admin_roles/{userId} {
+      allow get, list: if isAdmin();
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible profiles and messages of key college staff.
+     * @path /staffMembers/{staffMemberId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /staffMembers/{staffMemberId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible information about academic departments.
+     * @path /departments/{departmentId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /departments/{departmentId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible details of academic programs offered.
+     * @path /programs/{programId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /programs/{programId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible news articles and announcements.
+     * @path /newsArticles/{newsArticleId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /newsArticles/{newsArticleId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible details of college events.
+     * @path /events/{eventId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /events/{eventId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible FAQ data for the AI-Powered FAQ Tool.
+     * @path /faqs/{faqId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /faqs/{faqId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Singleton collection for general college info (mission, vision, etc.).
+     * @path /collegeDetails/{collegeDetailId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /collegeDetails/{collegeDetailId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Publicly accessible mandatory disclosure documents.
+     * @path /mandatoryDisclosures/{disclosureId}
+     * @allow (get, list) if true; (create, update, delete) if isAdmin()
+     * @deny (write) if requester is not an admin.
+     * @principle Public consumption with protected administrative write access.
+     */
+    match /mandatoryDisclosures/{disclosureId} {
+      allow get, list: if true;
+      allow create: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+  }
+}

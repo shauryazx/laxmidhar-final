@@ -1,0 +1,548 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a registered user of the Laxmidhar College Connect application, allowing for sign-up and login functionality.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "The user's email address, used for communication and potentially as a login identifier.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "The first name of the user."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The last name of the user."
+        },
+        "registrationDate": {
+          "type": "string",
+          "description": "The date and time when the user registered.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "registrationDate"
+      ]
+    },
+    "StaffMember": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "StaffMember",
+      "type": "object",
+      "description": "Represents a key administrative or academic staff member (e.g., Chairman, Director, Principal, HOD) whose profile and messages are displayed on the college website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the StaffMember entity."
+        },
+        "firstName": {
+          "type": "string",
+          "description": "The first name of the staff member."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The last name of the staff member."
+        },
+        "position": {
+          "type": "string",
+          "description": "The official position or title of the staff member (e.g., 'Chairman', 'Director', 'Principal', 'HOD Civil Engineering')."
+        },
+        "messageContent": {
+          "type": "string",
+          "description": "The full text of the message from their respective 'Desk' (e.g., Chairman's Desk, HOD's Desk)."
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "The professional contact email address for the staff member.",
+          "format": "email"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "A URL pointing to the staff member's profile picture or headshot.",
+          "format": "uri"
+        },
+        "bio": {
+          "type": "string",
+          "description": "A short biography or descriptive text for the staff member."
+        },
+        "departmentId": {
+          "type": "string",
+          "description": "Reference to the Department entity if the staff member is a Head of Department. (Relationship: Department 1:N StaffMember)"
+        }
+      },
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "position",
+        "messageContent",
+        "contactEmail"
+      ]
+    },
+    "Department": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Department",
+      "type": "object",
+      "description": "Represents an academic department within Laxmidhar College, organizing programs and staff.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Department entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The full name of the department (e.g., 'Civil Engineering Department')."
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the department's focus, mission, and academic offerings."
+        },
+        "headOfDepartmentId": {
+          "type": "string",
+          "description": "Reference to the StaffMember who is the Head of this Department. (Relationship: StaffMember 1:N Department)"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "headOfDepartmentId"
+      ]
+    },
+    "Program": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Program",
+      "type": "object",
+      "description": "Represents an academic program or course offered by Laxmidhar College, including details like seat capacity and eligibility.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Program entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The full name of the academic program (e.g., 'Diploma in Mechanical Engineering')."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the program, including its objectives and curriculum highlights."
+        },
+        "departmentId": {
+          "type": "string",
+          "description": "Reference to the Department offering this program. (Relationship: Department 1:N Program)"
+        },
+        "durationYears": {
+          "type": "number",
+          "description": "The duration of the program in years."
+        },
+        "seatCapacity": {
+          "type": "number",
+          "description": "The maximum number of students that can be admitted to this program."
+        },
+        "eligibilityCriteria": {
+          "type": "string",
+          "description": "A detailed description of the criteria students must meet for admission to this program."
+        },
+        "admissionProcess": {
+          "type": "string",
+          "description": "Step-by-step guidance on how to apply for the program."
+        },
+        "courseOutline": {
+          "type": "string",
+          "description": "A summary or outline of the courses and subjects included in the program."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "departmentId",
+        "durationYears",
+        "seatCapacity",
+        "eligibilityCriteria",
+        "admissionProcess"
+      ]
+    },
+    "NewsArticle": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "NewsArticle",
+      "type": "object",
+      "description": "Represents a news article or an important announcement published by Laxmidhar College.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the NewsArticle entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the news article or announcement."
+        },
+        "content": {
+          "type": "string",
+          "description": "The full textual content of the news article."
+        },
+        "publicationDate": {
+          "type": "string",
+          "description": "The date and time when the news article was published.",
+          "format": "date-time"
+        },
+        "author": {
+          "type": "string",
+          "description": "The name of the author or publishing entity (e.g., 'College Administration')."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Optional URL to an image associated with the news article for visual context.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "content",
+        "publicationDate",
+        "author"
+      ]
+    },
+    "Event": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Event",
+      "type": "object",
+      "description": "Represents an upcoming event or activity hosted by Laxmidhar College.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Event entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the event."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the event, including its purpose and agenda."
+        },
+        "eventDateTime": {
+          "type": "string",
+          "description": "The date and time when the event will take place.",
+          "format": "date-time"
+        },
+        "location": {
+          "type": "string",
+          "description": "The physical or virtual location where the event will be held."
+        },
+        "organizer": {
+          "type": "string",
+          "description": "The department or entity organizing the event."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Optional URL to an image or banner associated with the event.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "eventDateTime",
+        "location",
+        "organizer"
+      ]
+    },
+    "FAQ": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "FAQ",
+      "type": "object",
+      "description": "Represents a frequently asked question and its answer, used to power the AI-Powered FAQ Tool.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the FAQ entry."
+        },
+        "question": {
+          "type": "string",
+          "description": "The common question asked by users."
+        },
+        "answer": {
+          "type": "string",
+          "description": "The comprehensive answer to the question."
+        },
+        "category": {
+          "type": "string",
+          "description": "A category to group related FAQs (e.g., 'Admissions', 'Programs', 'General Information')."
+        }
+      },
+      "required": [
+        "id",
+        "question",
+        "answer",
+        "category"
+      ]
+    },
+    "CollegeDetail": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CollegeDetail",
+      "type": "object",
+      "description": "A singleton entity representing general, high-level information about Laxmidhar College, including its mission, vision, history, and contact details.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the CollegeDetail entity (typically a fixed ID as it's a singleton)."
+        },
+        "name": {
+          "type": "string",
+          "description": "The full official name of the college."
+        },
+        "mission": {
+          "type": "string",
+          "description": "The college's mission statement, outlining its purpose and values."
+        },
+        "vision": {
+          "type": "string",
+          "description": "The college's vision statement, describing its future aspirations."
+        },
+        "history": {
+          "type": "string",
+          "description": "A detailed historical overview of the college, from its founding to present day."
+        },
+        "address": {
+          "type": "string",
+          "description": "The full physical mailing address of the college."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "The main contact phone number for the college."
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The main contact email address for the college.",
+          "format": "email"
+        },
+        "locationMapUrl": {
+          "type": "string",
+          "description": "A URL to an online map service showing the college's precise geographical location.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "mission",
+        "vision",
+        "history",
+        "address",
+        "phoneNumber",
+        "emailAddress",
+        "locationMapUrl"
+      ]
+    },
+    "MandatoryDisclosure": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "MandatoryDisclosure",
+      "type": "object",
+      "description": "Represents an individual mandatory disclosure item, typically required by regulatory bodies like AICTE, ensuring transparency and compliance.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the MandatoryDisclosure entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title or subject of the disclosure (e.g., 'Faculty Details', 'Infrastructure Information')."
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief summary or description of the content within the disclosure document."
+        },
+        "documentUrl": {
+          "type": "string",
+          "description": "A URL pointing to the actual disclosure document, typically a PDF file.",
+          "format": "uri"
+        },
+        "publicationDate": {
+          "type": "string",
+          "description": "The date when the disclosure was published or last updated.",
+          "format": "date-time"
+        },
+        "category": {
+          "type": "string",
+          "description": "A categorization for the disclosure (e.g., 'Academic', 'Financial', 'Infrastructure', 'Admissions')."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "documentUrl",
+        "publicationDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores individual user profiles. Read/write access is restricted to the owner (`request.auth.uid == userId`), facilitating secure sign-up and login functionality.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user, corresponding to Firebase Authentication UID."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/staffMembers/{staffMemberId}",
+        "definition": {
+          "entityName": "StaffMember",
+          "schema": {
+            "$ref": "#/backend/entities/StaffMember"
+          },
+          "description": "Publicly accessible profiles and messages of key college staff (Chairman, Director, Principal, HODs). Supports easy retrieval for 'HODs Desk' and 'Chairman's Desk' features. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "staffMemberId",
+              "description": "The unique identifier for a staff member."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/departments/{departmentId}",
+        "definition": {
+          "entityName": "Department",
+          "schema": {
+            "$ref": "#/backend/entities/Department"
+          },
+          "description": "Publicly accessible information about academic departments. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "departmentId",
+              "description": "The unique identifier for an academic department."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/programs/{programId}",
+        "definition": {
+          "entityName": "Program",
+          "schema": {
+            "$ref": "#/backend/entities/Program"
+          },
+          "description": "Publicly accessible details of academic programs offered, including descriptions, eligibility, and admission processes. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "programId",
+              "description": "The unique identifier for an academic program."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/newsArticles/{newsArticleId}",
+        "definition": {
+          "entityName": "NewsArticle",
+          "schema": {
+            "$ref": "#/backend/entities/NewsArticle"
+          },
+          "description": "Publicly accessible news articles and announcements. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "newsArticleId",
+              "description": "The unique identifier for a news article or announcement."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/events/{eventId}",
+        "definition": {
+          "entityName": "Event",
+          "schema": {
+            "$ref": "#/backend/entities/Event"
+          },
+          "description": "Publicly accessible details of college events. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "eventId",
+              "description": "The unique identifier for an event."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/faqs/{faqId}",
+        "definition": {
+          "entityName": "FAQ",
+          "schema": {
+            "$ref": "#/backend/entities/FAQ"
+          },
+          "description": "Publicly accessible frequently asked questions and answers, powering the AI-Powered FAQ Tool. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "faqId",
+              "description": "The unique identifier for an FAQ entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/collegeDetails/{collegeDetailId}",
+        "definition": {
+          "entityName": "CollegeDetail",
+          "schema": {
+            "$ref": "#/backend/entities/CollegeDetail"
+          },
+          "description": "A singleton collection holding general college information (mission, vision, history, contact, location). Expected to have a single document (e.g., ID 'main'). Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "collegeDetailId",
+              "description": "The unique identifier for the college details (e.g., 'main' for the singleton document)."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/mandatoryDisclosures/{disclosureId}",
+        "definition": {
+          "entityName": "MandatoryDisclosure",
+          "schema": {
+            "$ref": "#/backend/entities/MandatoryDisclosure"
+          },
+          "description": "Publicly accessible mandatory disclosure documents required by regulatory bodies like AICTE. Read access is public, write access is restricted to administrators.",
+          "params": [
+            {
+              "name": "disclosureId",
+              "description": "The unique identifier for a mandatory disclosure document."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure for Laxmidhar College Connect is designed with a strong emphasis on Authorization Independence, Structural Segregation, and DBAC, as mandated by the core design principles.\n\n**Authorization Independence:** All public-facing content entities (StaffMember, Department, Program, NewsArticle, Event, FAQ, CollegeDetail, MandatoryDisclosure) are placed in root-level collections. This ensures their read access is uniform and globally available, eliminating any need for `get()` calls in security rules to determine read permissions. For write operations on these public collections, authorization relies on a dedicated `admin_roles` collection (e.g., `/admin_roles/{uid}`). An administrator's permission is determined by the *existence* of their UID in this collection, not by attributes denormalized within the content documents themselves. This allows for atomic write operations and simplifies rule logic, as rules only need to check `request.auth.uid == resource.id` for user profiles or `exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid))` for administrative actions. No content document needs to denormalize a 'members' map or 'ownerId' for *its own* read/write authorization, as the security posture is either 'publicly readable, admin writable' or 'user-owned private'.\n\n**Query Against Paths (QAPs):**\n1.  **Public Content Collections:** Collections like `/newsArticles`, `/events`, `/programs`, etc., are designed for homogeneous security posture. All documents within these collections are publicly readable. This allows for efficient and secure `list` queries (e.g., `db.collection('newsArticles').get()`) directly from the client without any rule filtering, as the entire collection is intended to be visible. Write access for these collections will be restricted to authenticated administrators, ensuring content integrity while supporting public reads.\n2.  **User Profiles:** The `/users/{userId}` collection uses path-based ownership. A user can only access (`get`, `list` their own, `create`, `update`, `delete`) their document if `request.auth.uid == userId`. This ensures that `list` operations attempting to retrieve other users' profiles will fail, enforcing QAP for private user data.\n3.  **Admin Roles:** The `/admin_roles/{uid}` collection is primarily for `exists()` checks in security rules. While it could technically be listed by authorized entities, its primary use case is to provide a fast, independent check for administrative privileges, thus supporting QAP by clearly defining who has elevated access without filtering content.\n\n**Structural Segregation:** Each entity type with a distinct security requirement is housed in its own top-level collection. User profiles are segregated into `/users`, and all public college information (Staff, Departments, Programs, News, Events, etc.) resides in separate, dedicated collections, each globally readable. This clear separation makes security rules highly readable and easy to debug, as rules for one collection do not depend on the data or permissions of another through complex `get()` calls.\n\n**DBAC:** The `admin_roles` collection implements Database Access Control (DBAC) for administrative privileges. This avoids custom claims, as all role information is stored directly in the database and can be checked using `exists()` in security rules."
+  }
+}
