@@ -35,7 +35,6 @@ const faqPrompt = ai.definePrompt({
 - **Location:** IN-3, M.I.A., RIICO (Near Tarni Cancer Hospital), Alwar-301030 (Raj.).
 - **City Office:** S.K. Engineers Academy, Near Nehru Garden, Alwar.
 - **Contact Numbers (Mobile):** 8824351992, 9799707879.
-- **Telephone:** 0144-2941792.
 - **Email:** laxmindharpoly@gmail.com.
 - **Registration No:** 13/alwar/1999.
 

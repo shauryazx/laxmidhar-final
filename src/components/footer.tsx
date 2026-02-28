@@ -57,10 +57,6 @@ export function Footer() {
                 <span>8824351992, 9799707879</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent shrink-0" />
-                <span>0144-2941792</span>
-              </li>
-              <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
                 <span>laxmindharpoly@gmail.com</span>
               </li>

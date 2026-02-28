@@ -49,13 +49,6 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><Phone className="h-6 w-6" /></div>
-                    <div>
-                      <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Telephone</h4>
-                      <p className="font-black text-lg text-primary">0144-2941792</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
                     <div className="bg-primary p-3 rounded-2xl text-white shadow-lg"><Mail className="h-6 w-6" /></div>
                     <div>
                       <h4 className="font-black text-xs uppercase text-accent mb-1 tracking-widest">Email Address</h4>
