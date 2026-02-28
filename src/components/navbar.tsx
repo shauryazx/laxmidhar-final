@@ -10,8 +10,7 @@ import {
   Phone, 
   UserRound, 
   Menu,
-  X,
-  FileText
+  X
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -43,9 +42,18 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex flex-col items-start">
-            <span className="text-xl font-bold tracking-tight">LAXMIDHAR POLYTECHNIC</span>
-            <span className="text-xs uppercase tracking-widest text-accent font-semibold">College Connect</span>
+          {/* Stylized LPC Logo */}
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="flex flex-col text-[7px] md:text-[8px] font-black border-r border-accent/40 pr-3 leading-[1.1] uppercase text-accent/90 tracking-tighter">
+              <span>Laxmidhar</span>
+              <span>Polytechnic</span>
+              <span>College</span>
+            </div>
+            <div className="flex items-baseline select-none">
+              <span className="text-3xl md:text-4xl font-black tracking-tighter text-white">L</span>
+              <span className="text-3xl md:text-4xl font-black tracking-tighter text-accent -ml-1">P</span>
+              <span className="text-3xl md:text-4xl font-black tracking-tighter text-white -ml-1">C</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

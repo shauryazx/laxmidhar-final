@@ -1,15 +1,25 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Smartphone } from "lucide-react";
+import { Mail, Facebook, Twitter, Instagram, Linkedin, Smartphone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Section */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-accent">Laxmidhar Polytechnic College</h3>
-            <p className="text-sm leading-relaxed text-background/70 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* LPC Branding Section */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3 group">
+              <div className="flex flex-col text-[8px] font-black border-r border-accent/40 pr-3 leading-tight uppercase text-accent">
+                <span>Laxmidhar</span>
+                <span>Polytechnic</span>
+              </div>
+              <div className="flex items-baseline select-none">
+                <span className="text-3xl font-black tracking-tighter text-white">L</span>
+                <span className="text-3xl font-black tracking-tighter text-accent -ml-1">P</span>
+                <span className="text-3xl font-black tracking-tighter text-white -ml-1">C</span>
+              </div>
+            </div>
+            <p className="text-sm leading-relaxed text-background/60">
               A premier institution dedicated to technical proficiency and vocational innovation in Alwar. 
               Preparing future engineering professionals with industrial excellence.
             </p>
@@ -23,8 +33,8 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Portals</h3>
-            <ul className="space-y-2 text-sm text-background/70">
+            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Portals</h3>
+            <ul className="space-y-3 text-sm text-background/70">
               <li><Link href="/about" className="hover:text-accent transition-colors">College Profile</Link></li>
               <li><Link href="/programs" className="hover:text-accent transition-colors">Academic Streams</Link></li>
               <li><Link href="/admissions" className="hover:text-accent transition-colors">Enrollment Center</Link></li>
@@ -35,8 +45,8 @@ export function Footer() {
 
           {/* Academic Desks */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Leadership</h3>
-            <ul className="space-y-2 text-sm text-background/70">
+            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Leadership</h3>
+            <ul className="space-y-3 text-sm text-background/70">
               <li><Link href="/desk/chairman" className="hover:text-accent transition-colors">Chairman's Perspective</Link></li>
               <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Director's Message</Link></li>
               <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Principal's Desk</Link></li>
@@ -46,7 +56,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Campus Reach</h3>
+            <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Campus Reach</h3>
             <ul className="space-y-4 text-sm text-background/70">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent shrink-0" />
@@ -64,8 +74,8 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-background/10 text-center text-xs text-background/40">
-          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. All Rights Reserved. AICTE Approved & BTER Affiliated. Reg. No. 13/alwar/1999.</p>
+        <div className="mt-16 pt-8 border-t border-background/10 text-center text-[10px] text-background/40 uppercase tracking-[0.2em]">
+          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. AICTE Approved & BTER Affiliated. Reg. No. 13/alwar/1999.</p>
         </div>
       </div>
     </footer>
