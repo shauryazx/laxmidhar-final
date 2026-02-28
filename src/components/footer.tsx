@@ -1,11 +1,19 @@
 
+'use client';
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Facebook, Twitter, Instagram, Linkedin, Smartphone, MapPin } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Footer() {
+  const [year, setYear] = useState<number | null>(null);
   const logo = PlaceHolderImages.find(img => img.id === 'college-logo');
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="bg-foreground text-background py-16">
@@ -85,7 +93,7 @@ export function Footer() {
         </div>
         
         <div className="mt-16 pt-8 border-t border-background/10 text-center text-[10px] text-background/40 uppercase tracking-[0.2em]">
-          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. AICTE Approved & BTER Affiliated. Reg. No. 13/alwar/1999.</p>
+          <p>&copy; {year || '...'} Laxmidhar Polytechnic College. AICTE Approved & BTER Affiliated. Reg. No. 13/alwar/1999.</p>
         </div>
       </div>
     </footer>
