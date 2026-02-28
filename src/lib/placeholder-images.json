@@ -38,9 +38,9 @@
     },
     {
       "id": "mechanical-eng",
-      "description": "Mechanical Engineering workshop at Laxmidhar Polytechnic College",
+      "description": "Detailed mechanical engineering blueprints and technical drawings showing complex gear systems",
       "imageUrl": "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "mechanical workshop"
+      "imageHint": "mechanical blueprints"
     },
     {
       "id": "electrical-eng",
@@ -50,9 +50,9 @@
     },
     {
       "id": "civil-eng",
-      "description": "Civil Engineering construction models at Laxmidhar Polytechnic College",
+      "description": "Civil engineering blueprints and architectural plans with safety equipment on a technical workspace",
       "imageUrl": "https://images.unsplash.com/photo-1503387762-592dea58ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "civil construction"
+      "imageHint": "civil blueprints"
     }
   ]
 }
