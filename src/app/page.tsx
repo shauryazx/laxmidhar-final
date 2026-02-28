@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, GraduationCap, Users, History, Zap, TrendingUp, Trophy } from "lucide-react";
+import { ArrowRight, GraduationCap, Users, History, Zap, TrendingUp } from "lucide-react";
 
 export default function Home() {
   return (
@@ -9,9 +9,6 @@ export default function Home() {
       {/* Hero Section - Image Removed */}
       <section className="relative h-[550px] flex items-center justify-center overflow-hidden bg-primary">
         <div className="relative container mx-auto px-4 text-center text-primary-foreground">
-          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent-foreground px-4 py-1.5 rounded-full text-sm font-bold mb-6 backdrop-blur-sm uppercase tracking-widest">
-            <Trophy className="h-4 w-4" /> Admission Open for Session 2024-25
-          </div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
             Building Careers with <br /> <span className="text-accent">Technical Excellence</span>
           </h1>
@@ -22,7 +19,7 @@ export default function Home() {
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-10 py-7 text-lg font-bold shadow-lg" asChild>
               <Link href="/admissions">Apply Now <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary px-10 py-7 text-lg font-bold" asChild>
+            <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10 px-10 py-7 text-lg font-bold" asChild>
               <Link href="/programs">Explore Branches</Link>
             </Button>
           </div>
