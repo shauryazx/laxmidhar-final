@@ -2,57 +2,57 @@
   "placeholderImages": [
     {
       "id": "hero-college",
-      "description": "Main college building and campus view",
-      "imageUrl": "https://images.unsplash.com/photo-1592066575517-58df903152f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzcyMTkzNjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "college building"
+      "description": "Laxmidhar College main campus building in Alwar",
+      "imageUrl": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBjb2xsZWdlfGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian college"
     },
     {
       "id": "engineering-lab",
-      "description": "Engineering laboratory with equipment",
+      "description": "Technical engineering laboratory at Laxmidhar College",
       "imageUrl": "https://images.unsplash.com/photo-1580982328660-293810b76efd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbmdpbmVlcmluZyUyMGxhYm9yYXRvcnl8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering laboratory"
     },
     {
       "id": "chairman-portrait",
-      "description": "Portrait of Chairman Mahendra Singh Choudhary",
-      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcyMjUyMzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional man"
+      "description": "Chairman Mahendra Singh Choudhary",
+      "imageUrl": "https://images.unsplash.com/photo-1620025939271-47be27b7449c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian professional"
     },
     {
       "id": "director-portrait",
-      "description": "Portrait of Director Nirma Choudhary",
-      "imageUrl": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NzIyNTE0OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional woman"
+      "description": "Director Nirma Choudhary",
+      "imageUrl": "https://images.unsplash.com/photo-1596283850353-2f01e339f734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian professional"
     },
     {
       "id": "principal-portrait",
-      "description": "Portrait of Principal Shahkool Khan",
-      "imageUrl": "https://images.unsplash.com/photo-1758685847967-c598c3b176b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMHByb2Zlc3NvcnxlbnwwfHx8fDE3NzIyMDI3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Principal Shahkool Khan",
+      "imageUrl": "https://images.unsplash.com/photo-1758685734408-19dd0cc86d2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhY2FkZW1pYyUyMHByb2Zlc3NvcnxlbnwwfHx8fDE3NzIyMDI3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "academic professor"
     },
     {
       "id": "students-campus",
-      "description": "Students studying and interacting on campus",
-      "imageUrl": "https://images.unsplash.com/photo-1663162550938-60f70fab5d31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29sbGVnZSUyMHN0dWRlbnRzfGVufDB8fHx8MTc3MjI2NjA1OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "college students"
+      "description": "Students at Laxmidhar College Alwar campus",
+      "imageUrl": "https://images.unsplash.com/photo-1569173675610-42c361a86e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBzdHVkZW50c3xlbnwwfHx8fDE3NzIyNjYyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian students"
     },
     {
       "id": "mechanical-eng",
-      "description": "Mechanical engineering workshop",
-      "imageUrl": "https://images.unsplash.com/photo-1755375586606-9468ba9d1230?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZWNoYW5pY2FsJTIwbWFjaGluZXxlbnwwfHx8fDE3NzIyNjYwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mechanical machine"
+      "description": "Mechanical Engineering workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1761519609252-3b868e540398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWNoYW5pY2FsJTIwd29ya3Nob3B8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mechanical workshop"
     },
     {
       "id": "electrical-eng",
-      "description": "Electrical engineering lab setup",
-      "imageUrl": "https://images.unsplash.com/photo-1613500428454-70dcc9e23a80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZWxlY3RyaWNhbCUyMGNpcmN1aXR8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "electrical circuit"
+      "description": "Electrical Engineering lab equipment",
+      "imageUrl": "https://images.unsplash.com/photo-1668036268099-9d6b38c7f791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwbGFifGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electrical lab"
     },
     {
       "id": "civil-eng",
-      "description": "Civil engineering construction models",
-      "imageUrl": "https://images.unsplash.com/photo-1652318522046-8f6057f04fb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "construction architecture"
+      "description": "Civil Engineering construction models and site",
+      "imageUrl": "https://images.unsplash.com/photo-1599995903128-531fc7fb694b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjI0MzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
     }
   ]
 }
