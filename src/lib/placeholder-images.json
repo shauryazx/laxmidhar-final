@@ -4,55 +4,55 @@
       "id": "hero-college",
       "description": "Laxmidhar Polytechnic College main campus building in Alwar",
       "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "college building"
+      "imageHint": "Indian campus"
     },
     {
       "id": "engineering-lab",
       "description": "Technical engineering laboratory at Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "engineering lab"
+      "imageHint": "engineering laboratory"
     },
     {
       "id": "chairman-portrait",
       "description": "Chairman Mahendra Singh Choudhary of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "indian businessman"
+      "imageHint": "indian principal"
     },
     {
       "id": "director-portrait",
       "description": "Director Nirma Choudhary of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "business woman"
+      "imageHint": "indian director"
     },
     {
       "id": "principal-portrait",
       "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "professor portrait"
+      "imageHint": "indian professor"
     },
     {
       "id": "students-campus",
       "description": "Students at Laxmidhar Polytechnic College Alwar campus",
       "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "college students"
+      "imageHint": "indian students"
     },
     {
       "id": "mechanical-eng",
-      "description": "Detailed mechanical engineering blueprints and technical drawings showing complex gear systems",
+      "description": "Mechanical Engineering workshop with heavy machinery and industrial tools",
       "imageUrl": "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "mechanical blueprints"
+      "imageHint": "mechanical workshop"
     },
     {
       "id": "electrical-eng",
-      "description": "Electrical Engineering lab equipment at Laxmidhar Polytechnic College",
+      "description": "Electrical Engineering lab equipment showing circuits and power systems",
       "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "electrical engineering"
+      "imageHint": "electrical lab"
     },
     {
       "id": "civil-eng",
-      "description": "Civil engineering blueprints and architectural plans with safety equipment on a technical workspace",
+      "description": "Civil Engineering construction site showing structural work and surveying",
       "imageUrl": "https://images.unsplash.com/photo-1503387762-592dea58ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "civil blueprints"
+      "imageHint": "construction site"
     }
   ]
 }
