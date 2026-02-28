@@ -22,7 +22,7 @@ export default function Home() {
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-10 py-7 text-lg font-bold shadow-lg" asChild>
               <Link href="/admissions">Apply Now <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary px-10 py-7 text-lg font-bold" asChild>
+            <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary px-10 py-7 text-lg font-bold" asChild>
               <Link href="/programs">Explore Branches</Link>
             </Button>
           </div>
