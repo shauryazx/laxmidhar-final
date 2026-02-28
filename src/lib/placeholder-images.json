@@ -2,9 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-college",
-      "description": "Laxmidhar Polytechnic College official institutional banner showing the main campus structure",
+      "description": "Main institutional collage banner showing the Laxmidhar Polytechnic College campus architecture",
       "imageUrl": "https://crowded-copper-ywf9xzrzlg.edgeone.app/joshDefaltBanner1.jpg",
       "imageHint": "college campus"
+    },
+    {
+      "id": "students-campus",
+      "description": "Campus visual showing the academic building and green lawns for the Our Journey section",
+      "imageUrl": "https://crowded-copper-ywf9xzrzlg.edgeone.app/joshDefaltBanner1.jpg",
+      "imageHint": "college banner"
     },
     {
       "id": "engineering-lab",
@@ -29,12 +35,6 @@
       "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
-    },
-    {
-      "id": "students-campus",
-      "description": "The official banner visual for the Our Journey section of Laxmidhar Polytechnic College",
-      "imageUrl": "https://crowded-copper-ywf9xzrzlg.edgeone.app/joshDefaltBanner1.jpg",
-      "imageHint": "college banner"
     },
     {
       "id": "mechanical-eng",
