@@ -1,11 +1,7 @@
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { History, Target, Eye, ShieldCheck, Award, Users, Trophy } from "lucide-react";
+import { History, Target, Eye, Award, Trophy } from "lucide-react";
 
 export default function AboutPage() {
-  const studentsImg = PlaceHolderImages.find(img => img.id === "students-campus");
-
   return (
     <div className="pb-20">
       <div className="bg-primary text-primary-foreground py-24 mb-16">
@@ -42,8 +38,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Core Identity */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Core Identity - Image Removed */}
+        <section className="max-w-4xl mx-auto space-y-10">
           <div className="space-y-6">
             <div className="flex items-center gap-3 text-primary mb-2">
               <History className="h-8 w-8 text-accent" />
@@ -55,17 +51,6 @@ export default function AboutPage() {
             <p className="text-muted-foreground leading-relaxed">
               We focus on the holistic development of our students, ensuring they are not just academically proficient but also industry-ready. Our tie-ups with RIICO manufacturing units and professional coaching paradigms (College + Tuition) have consistently yielded near-perfect academic results year after year.
             </p>
-          </div>
-          <div className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
-            {studentsImg && (
-              <Image
-                src={studentsImg.imageUrl}
-                alt={studentsImg.description}
-                fill
-                className="object-cover"
-                data-ai-hint={studentsImg.imageHint}
-              />
-            )}
           </div>
         </section>
 

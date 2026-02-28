@@ -1,28 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight, BookOpen, GraduationCap, Users, History, ShieldCheck, Zap, TrendingUp, Trophy } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight, GraduationCap, Users, History, Zap, TrendingUp, Trophy } from "lucide-react";
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === "hero-college");
-  
   return (
     <div className="flex flex-col gap-16 pb-16">
-      {/* Hero Section */}
-      <section className="relative h-[650px] flex items-center justify-center overflow-hidden">
-        {heroImg && (
-          <Image
-            src={heroImg.imageUrl}
-            alt={heroImg.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImg.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-primary/70" />
+      {/* Hero Section - Image Removed */}
+      <section className="relative h-[550px] flex items-center justify-center overflow-hidden bg-primary">
         <div className="relative container mx-auto px-4 text-center text-primary-foreground">
           <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent-foreground px-4 py-1.5 rounded-full text-sm font-bold mb-6 backdrop-blur-sm uppercase tracking-widest">
             <Trophy className="h-4 w-4" /> Admission Open for Session 2024-25

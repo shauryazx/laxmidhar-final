@@ -1,42 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-college",
-      "description": "Main institutional collage banner showing the Laxmidhar Polytechnic College campus architecture",
-      "imageUrl": "https://crowded-copper-ywf9xzrzlg.edgeone.app/joshDefaltBanner1.jpg",
-      "imageHint": "college campus"
-    },
-    {
-      "id": "students-campus",
-      "description": "Campus visual showing the academic building and green lawns for the Our Journey section",
-      "imageUrl": "https://crowded-copper-ywf9xzrzlg.edgeone.app/joshDefaltBanner1.jpg",
-      "imageHint": "college banner"
-    },
-    {
-      "id": "engineering-lab",
-      "description": "Technical engineering laboratory at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1580982325236-11d214b9f279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbmdpbmVlcmluZyUyMGxhYnxlbnwwfHx8fDE3NzIyNjc5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "engineering lab"
-    },
-    {
-      "id": "chairman-portrait",
-      "description": "Chairman Mahendra Singh Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
-    },
-    {
-      "id": "director-portrait",
-      "description": "Director Nirma Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjIwNjc5OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
-    },
-    {
-      "id": "principal-portrait",
-      "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
-    },
-    {
       "id": "mechanical-eng",
       "description": "Technical mechanical engineering blueprints and gear designs",
       "imageUrl": "https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjg4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",

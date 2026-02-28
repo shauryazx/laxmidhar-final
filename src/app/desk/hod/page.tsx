@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Mail, UserRound, GraduationCap, Award } from "lucide-react";
 
@@ -7,14 +5,12 @@ const keyPersonnel = [
   {
     role: "Director",
     name: "Nirma Choudhary",
-    msg: "Our focus is on creating a balanced ecosystem of academic rigor and student welfare at Laxmidhar Polytechnic College. We ensure that every resource is directed towards the holistic development of our budding engineers.",
-    img: PlaceHolderImages.find(img => img.id === "director-portrait")
+    msg: "Our focus is on creating a balanced ecosystem of academic rigor and student welfare at Laxmidhar Polytechnic College. We ensure that every resource is directed towards the holistic development of our budding engineers."
   },
   {
     role: "Principal",
     name: "Shahkool Khan",
-    msg: "Discipline, dedication, and determination are the pillars of Laxmidhar Polytechnic College. Our curriculum is designed to push students beyond their boundaries and prepare them for real-world challenges.",
-    img: PlaceHolderImages.find(img => img.id === "principal-portrait")
+    msg: "Discipline, dedication, and determination are the pillars of Laxmidhar Polytechnic College. Our curriculum is designed to push students beyond their boundaries and prepare them for real-world challenges."
   }
 ];
 
@@ -37,36 +33,21 @@ export default function HodDesk() {
       </div>
 
       <div className="container mx-auto px-4 space-y-24">
-        {/* Leadership Section */}
+        {/* Leadership Section - Images Removed */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {keyPersonnel.map((person, i) => (
-            <Card key={i} className="overflow-hidden border-none shadow-xl bg-white group hover:shadow-2xl transition-all">
-              <div className="md:flex h-full">
-                <div className="md:w-2/5 relative h-72 md:h-auto overflow-hidden">
-                  {person.img && (
-                    <Image
-                      src={person.img.imageUrl}
-                      alt={person.img.description}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      data-ai-hint={person.img.imageHint}
-                    />
-                  )}
-                </div>
-                <div className="md:w-3/5 p-8 flex flex-col justify-center">
-                  <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold w-fit mb-4 uppercase">
-                    {person.role}
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">{person.name}</h3>
-                  <p className="text-muted-foreground italic leading-relaxed text-sm mb-6">
-                    "{person.msg}"
-                  </p>
-                  <div className="flex gap-4">
-                    <Award className="h-5 w-5 text-primary" />
-                    <GraduationCap className="h-5 w-5 text-primary" />
-                    <UserRound className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
+            <Card key={i} className="overflow-hidden border-none shadow-xl bg-white p-10 hover:shadow-2xl transition-all">
+              <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold w-fit mb-4 uppercase">
+                {person.role}
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4">{person.name}</h3>
+              <p className="text-muted-foreground italic leading-relaxed text-sm mb-6">
+                "{person.msg}"
+              </p>
+              <div className="flex gap-4">
+                <Award className="h-5 w-5 text-primary" />
+                <GraduationCap className="h-5 w-5 text-primary" />
+                <UserRound className="h-5 w-5 text-primary" />
               </div>
             </Card>
           ))}
