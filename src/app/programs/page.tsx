@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -42,7 +41,7 @@ export default function ProgramsPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Academic Programs</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Our 3-year Diploma in Engineering programs are designed to provide students with the foundational technical knowledge and practical skills needed to thrive in modern industry.
+            Our 3-year Diploma in Engineering programs at Laxmidhar Polytechnic College are designed to provide students with the foundational technical knowledge and practical skills needed to thrive in modern industry.
           </p>
         </div>
       </div>
@@ -119,7 +118,7 @@ export default function ProgramsPage() {
             <div className="bg-white p-6 rounded-2xl shadow-inner border border-border">
               <h3 className="font-bold text-xl mb-4">Affiliation Details</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Laxmidhar College is proudly approved by AICTE (All India Council for Technical Education) and affiliated with the Board of Technical Education, Rajasthan (BTER).
+                Laxmidhar Polytechnic College is proudly approved by AICTE (All India Council for Technical Education) and affiliated with the Board of Technical Education, Rajasthan (BTER).
               </p>
               <Badge variant="outline" className="text-primary border-primary">AICTE Approved</Badge>
               <Badge variant="outline" className="ml-2 text-primary border-primary">BTER Affiliated</Badge>

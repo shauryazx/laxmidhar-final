@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -13,7 +12,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Legacy</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Discover the journey of Laxmidhar College, from a visionary idea to a center of technical excellence.
+            Discover the journey of Laxmidhar Polytechnic College, from a visionary idea to a center of technical excellence.
           </p>
         </div>
       </div>
@@ -27,7 +26,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold uppercase tracking-wider">History</h2>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Founded under the aegis of transformative leadership, Laxmidhar College was established to address the critical gap in vocational and technical education in the Alwar region. Over the years, we have grown from a small training center to a fully recognized Diploma Engineering institution.
+              Founded under the aegis of transformative leadership, Laxmidhar Polytechnic College was established to address the critical gap in vocational and technical education in the Alwar region. Over the years, we have grown from a small training center to a fully recognized Diploma Engineering institution.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Our journey is marked by a steadfast commitment to high-quality instruction and industry-aligned training. We have consistently upgraded our laboratories, expanded our library, and fostered partnerships with leading industrial firms in the RIICO area to provide our students with the best possible opportunities.

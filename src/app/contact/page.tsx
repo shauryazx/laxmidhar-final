@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,7 +11,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Contact Us</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Have questions? We are here to help. Reach out via the form or visit our campus in person.
+            Have questions about Laxmidhar Polytechnic College? We are here to help. Reach out via the form or visit our campus in person.
           </p>
         </div>
       </div>
@@ -45,7 +44,7 @@ export default function ContactPage() {
                     <div className="bg-primary p-3 rounded-lg text-white"><Mail className="h-6 w-6" /></div>
                     <div>
                       <h4 className="font-bold text-sm uppercase text-muted-foreground">Email</h4>
-                      <p className="font-medium text-sm">info@laxmidharcollege.ac.in</p>
+                      <p className="font-medium text-sm">info@laxmidharpolytechnic.ac.in</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">

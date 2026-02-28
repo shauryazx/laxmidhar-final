@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -49,8 +48,8 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex flex-col items-start">
-            <span className="text-xl font-bold tracking-tight">LAXMIDHAR COLLEGE</span>
-            <span className="text-xs uppercase tracking-widest text-accent font-semibold">Connect</span>
+            <span className="text-xl font-bold tracking-tight">LAXMIDHAR POLYTECHNIC</span>
+            <span className="text-xs uppercase tracking-widest text-accent font-semibold">College Connect</span>
           </Link>
 
           {/* Desktop Navigation */}

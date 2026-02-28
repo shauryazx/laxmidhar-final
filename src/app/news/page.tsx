@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Bell, Flag, Mic2 } from "lucide-react";
@@ -8,7 +7,7 @@ const newsItems = [
     type: "Admission",
     date: "June 05, 2024",
     title: "New Admission Session 2024-25 Announced",
-    desc: "Applications are now invited for diploma courses in all engineering streams. Limited seats available!",
+    desc: "Applications are now invited for diploma courses in all engineering streams at Laxmidhar Polytechnic College. Limited seats available!",
     icon: Bell
   },
   {
@@ -48,7 +47,7 @@ export default function NewsPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">News & Events</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Stay updated with the latest happenings, academic calendars, and event announcements at Laxmidhar College.
+            Stay updated with the latest happenings, academic calendars, and event announcements at Laxmidhar Polytechnic College.
           </p>
         </div>
       </div>

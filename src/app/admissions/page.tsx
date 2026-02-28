@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -11,7 +10,7 @@ export default function AdmissionsPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Admission Portal</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Take the first step towards a rewarding engineering career. We follow a transparent and merit-based admission process.
+            Take the first step towards a rewarding engineering career at Laxmidhar Polytechnic College. We follow a transparent and merit-based admission process.
           </p>
         </div>
       </div>

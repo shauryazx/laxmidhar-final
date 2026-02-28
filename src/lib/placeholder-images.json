@@ -2,55 +2,55 @@
   "placeholderImages": [
     {
       "id": "hero-college",
-      "description": "Laxmidhar College main campus building in Alwar",
+      "description": "Laxmidhar Polytechnic College main campus building in Alwar",
       "imageUrl": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBjb2xsZWdlfGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian college"
     },
     {
       "id": "engineering-lab",
-      "description": "Technical engineering laboratory at Laxmidhar College",
+      "description": "Technical engineering laboratory at Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1580982328660-293810b76efd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbmdpbmVlcmluZyUyMGxhYm9yYXRvcnl8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "engineering laboratory"
     },
     {
       "id": "chairman-portrait",
-      "description": "Chairman Mahendra Singh Choudhary",
+      "description": "Chairman Mahendra Singh Choudhary of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1620025939271-47be27b7449c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian professional"
     },
     {
       "id": "director-portrait",
-      "description": "Director Nirma Choudhary",
+      "description": "Director Nirma Choudhary of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1596283850353-2f01e339f734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian professional"
     },
     {
       "id": "principal-portrait",
-      "description": "Principal Shahkool Khan",
+      "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1758685734408-19dd0cc86d2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhY2FkZW1pYyUyMHByb2Zlc3NvcnxlbnwwfHx8fDE3NzIyMDI3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "academic professor"
     },
     {
       "id": "students-campus",
-      "description": "Students at Laxmidhar College Alwar campus",
+      "description": "Students at Laxmidhar Polytechnic College Alwar campus",
       "imageUrl": "https://images.unsplash.com/photo-1569173675610-42c361a86e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBzdHVkZW50c3xlbnwwfHx8fDE3NzIyNjYyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian students"
     },
     {
       "id": "mechanical-eng",
-      "description": "Mechanical Engineering workshop",
+      "description": "Mechanical Engineering workshop at Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1761519609252-3b868e540398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWNoYW5pY2FsJTIwd29ya3Nob3B8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mechanical workshop"
     },
     {
       "id": "electrical-eng",
-      "description": "Electrical Engineering lab equipment",
+      "description": "Electrical Engineering lab equipment at Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1668036268099-9d6b38c7f791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwbGFifGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "electrical lab"
     },
     {
       "id": "civil-eng",
-      "description": "Civil Engineering construction models and site",
+      "description": "Civil Engineering construction models at Laxmidhar Polytechnic College",
       "imageUrl": "https://images.unsplash.com/photo-1599995903128-531fc7fb694b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjI0MzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "construction site"
     }

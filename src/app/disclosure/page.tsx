@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ShieldCheck, FileText, Download, Landmark, ExternalLink } from "lucide-react";
@@ -11,7 +10,7 @@ export default function DisclosurePage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Mandatory Disclosure</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            In compliance with AICTE norms, we maintain transparency regarding our infrastructure, faculty, and institutional details.
+            In compliance with AICTE norms, Laxmidhar Polytechnic College maintains transparency regarding our infrastructure, faculty, and institutional details.
           </p>
         </div>
       </div>
@@ -27,7 +26,7 @@ export default function DisclosurePage() {
             <CardContent className="p-0">
               <Table>
                 <TableBody>
-                  <TableRow><TableCell className="font-bold">Institute Name</TableCell><TableCell>Laxmidhar College</TableCell></TableRow>
+                  <TableRow><TableCell className="font-bold">Institute Name</TableCell><TableCell>Laxmidhar Polytechnic College</TableCell></TableRow>
                   <TableRow><TableCell className="font-bold">AICTE ID</TableCell><TableCell>1-XXXXXX-XXXX</TableCell></TableRow>
                   <TableRow><TableCell className="font-bold">Affiliation</TableCell><TableCell>BTER, Rajasthan</TableCell></TableRow>
                   <TableRow><TableCell className="font-bold">Address</TableCell><TableCell>1N-3 MIA RIICO, Alwar</TableCell></TableRow>

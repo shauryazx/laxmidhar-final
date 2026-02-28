@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Quote } from "lucide-react";
@@ -40,19 +39,19 @@ export default function ChairmanDesk() {
               <h2 className="text-3xl font-bold text-primary italic">"Education is the most powerful weapon which you can use to change the world."</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  At Laxmidhar College, our vision has always been to create a learning environment where technical excellence meets ethical leadership. In today's rapidly changing industrial landscape, the role of a technician is more critical than ever. We are not just training engineers; we are building problem-solvers who will lead the infrastructure of tomorrow.
+                  At Laxmidhar Polytechnic College, our vision has always been to create a learning environment where technical excellence meets ethical leadership. In today's rapidly changing industrial landscape, the role of a technician is more critical than ever. We are not just training engineers; we are building problem-solvers who will lead the infrastructure of tomorrow.
                 </p>
                 <p>
                   Our commitment to the Alwar region is unwavering. By providing high-quality Diploma education, we aim to empower the youth of Rajasthan with skills that make them industry-ready from day one. I invite all aspiring students to join us in this journey of innovation and growth.
                 </p>
                 <p>
-                  We continuously invest in state-of-the-art laboratory equipment and foster a culture of hands-on learning. My best wishes to all the students and faculty who make Laxmidhar College a beacon of hope and professional achievement.
+                  We continuously invest in state-of-the-art laboratory equipment and foster a culture of hands-on learning. My best wishes to all the students and faculty who make Laxmidhar Polytechnic College a beacon of hope and professional achievement.
                 </p>
               </div>
               <div className="pt-8 flex flex-col items-end">
                 <div className="border-t border-border pt-4 w-64 text-right">
                   <p className="font-bold text-primary text-xl">M.S. Choudhary</p>
-                  <p className="text-sm text-muted-foreground">Chairman, Laxmidhar College</p>
+                  <p className="text-sm text-muted-foreground">Chairman, Laxmidhar Polytechnic College</p>
                 </div>
               </div>
             </div>

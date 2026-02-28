@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
@@ -9,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-accent">Laxmidhar College</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent">Laxmidhar Polytechnic College</h3>
             <p className="text-sm leading-relaxed text-background/70 mb-4">
-              Providing quality technical education and fostering innovation for over two decades. 
+              Providing quality technical education and fostering innovation for over two decades in Alwar. 
               Our mission is to prepare students for successful engineering careers through practical learning.
             </p>
             <div className="flex space-x-4">
@@ -59,14 +58,14 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
-                <span>info@laxmidharcollege.ac.in</span>
+                <span>info@laxmidharpolytechnic.ac.in</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-xs text-background/40">
-          <p>&copy; {new Date().getFullYear()} Laxmidhar College Connect. All Rights Reserved. AICTE Approved & Affiliated.</p>
+          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College Connect. All Rights Reserved. AICTE Approved & Affiliated.</p>
         </div>
       </div>
     </footer>

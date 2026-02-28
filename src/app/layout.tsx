@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
@@ -6,8 +5,8 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Laxmidhar College Connect | Premier Engineering Diploma Institute',
-  description: 'Welcome to Laxmidhar College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
+  title: 'Laxmidhar Polytechnic College Connect | Premier Engineering Diploma Institute',
+  description: 'Welcome to Laxmidhar Polytechnic College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
 };
 
 export default function RootLayout({

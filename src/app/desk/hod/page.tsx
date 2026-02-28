@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -8,21 +7,21 @@ const keyPersonnel = [
   {
     role: "Director",
     name: "Nirma Choudhary",
-    msg: "Our focus is on creating a balanced ecosystem of academic rigor and student welfare. We ensure that every resource is directed towards the holistic development of our budding engineers.",
+    msg: "Our focus is on creating a balanced ecosystem of academic rigor and student welfare at Laxmidhar Polytechnic College. We ensure that every resource is directed towards the holistic development of our budding engineers.",
     img: PlaceHolderImages.find(img => img.id === "director-portrait")
   },
   {
     role: "Principal",
     name: "Shahkool Khan",
-    msg: "Discipline, dedication, and determination are the pillars of Laxmidhar College. Our curriculum is designed to push students beyond their boundaries and prepare them for real-world challenges.",
+    msg: "Discipline, dedication, and determination are the pillars of Laxmidhar Polytechnic College. Our curriculum is designed to push students beyond their boundaries and prepare them for real-world challenges.",
     img: PlaceHolderImages.find(img => img.id === "principal-portrait")
   }
 ];
 
 const hods = [
-  { dept: "Civil Engineering", name: "Nikita Jagid", icon: "🏗️", contact: "hod.civil@laxmidhar.ac.in" },
-  { dept: "Mechanical Engineering", name: "Jya Seini", icon: "⚙️", contact: "hod.mech@laxmidhar.ac.in" },
-  { dept: "Electrical Engineering", name: "Sunil Mahiwal", icon: "⚡", contact: "hod.elec@laxmidhar.ac.in" }
+  { dept: "Civil Engineering", name: "Nikita Jagid", icon: "🏗️", contact: "hod.civil@laxmidharpolytechnic.ac.in" },
+  { dept: "Mechanical Engineering", name: "Jya Seini", icon: "⚙️", contact: "hod.mech@laxmidharpolytechnic.ac.in" },
+  { dept: "Electrical Engineering", name: "Sunil Mahiwal", icon: "⚡", contact: "hod.elec@laxmidharpolytechnic.ac.in" }
 ];
 
 export default function HodDesk() {
@@ -32,7 +31,7 @@ export default function HodDesk() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">HODs & Administrative Desk</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Meet the academic leaders driving innovation and excellence at Laxmidhar College.
+            Meet the academic leaders driving innovation and excellence at Laxmidhar Polytechnic College.
           </p>
         </div>
       </div>
@@ -103,7 +102,7 @@ export default function HodDesk() {
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-bold">Academic Commitment</h2>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Our HODs are not just administrators; they are mentors committed to the technical proficiency and moral integrity of our students. We maintain an open-door policy for all academic inquiries.
+              Our HODs are not just administrators; they are mentors committed to the technical proficiency and moral integrity of our students. We maintain an open-door policy for all academic inquiries at Laxmidhar Polytechnic College.
             </p>
           </div>
           <div className="absolute top-0 right-0 p-8 opacity-10">

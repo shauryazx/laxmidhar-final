@@ -1,4 +1,3 @@
-
 import { FaqChat } from "@/components/faq-chat";
 import { Card, CardContent } from "@/components/ui/card";
 import { BrainCircuit, Info, Lightbulb, Zap } from "lucide-react";
@@ -10,7 +9,7 @@ export default function FaqPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">AI FAQ Assistant</h1>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Have a quick question? Our AI-powered assistant is trained on college specifics to provide instant answers 24/7.
+            Have a quick question? Our AI-powered assistant is trained on Laxmidhar Polytechnic College specifics to provide instant answers 24/7.
           </p>
         </div>
       </div>
@@ -29,7 +28,7 @@ export default function FaqPage() {
               {[
                 { title: "Natural Language", desc: "Type like you're talking to a person. Our AI understands context.", icon: Info },
                 { title: "Instant Answers", desc: "Get immediate responses about admissions, fees, and programs.", icon: Zap },
-                { title: "Accurate Info", desc: "Trained specifically on Laxmidhar College's official data.", icon: Lightbulb }
+                { title: "Accurate Info", desc: "Trained specifically on Laxmidhar Polytechnic College's official data.", icon: Lightbulb }
               ].map((item, i) => (
                 <Card key={i} className="border-none shadow-md bg-white">
                   <CardContent className="pt-6 flex gap-4">

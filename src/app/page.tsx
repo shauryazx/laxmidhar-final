@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -29,7 +28,7 @@ export default function Home() {
             Nurturing Future <br /> <span className="text-accent">Engineers</span> & Innovators
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-primary-foreground/80">
-            Laxmidhar College is a premier technical institute in Rajasthan, dedicated to excellence in Diploma Engineering education since inception.
+            Laxmidhar Polytechnic College is a premier technical institute in Rajasthan, dedicated to excellence in Diploma Engineering education since inception.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
@@ -137,7 +136,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                We offer a focused 3-year Diploma curriculum designed for practical skill acquisition and industry readiness.
+                We offer a focused 3-year Diploma curriculum at Laxmidhar Polytechnic College designed for practical skill acquisition and industry readiness.
               </p>
               <Button className="w-full sm:w-auto" asChild>
                 <Link href="/programs">View Full Curriculum</Link>

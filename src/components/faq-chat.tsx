@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -17,7 +16,7 @@ type Message = {
 export function FaqChat() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
-    { role: "bot", content: "Hello! I'm your Laxmidhar College Assistant. How can I help you today regarding admissions, programs, or general info?" }
+    { role: "bot", content: "Hello! I'm your Laxmidhar Polytechnic College Assistant. How can I help you today regarding admissions, programs, or general info?" }
   ]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -47,7 +46,7 @@ export function FaqChat() {
           <MessageSquare className="h-6 w-6 text-accent" />
           <div>
             <CardTitle>AI Support Assistant</CardTitle>
-            <CardDescription className="text-primary-foreground/70">Ask me anything about Laxmidhar College</CardDescription>
+            <CardDescription className="text-primary-foreground/70">Ask me anything about Laxmidhar Polytechnic College</CardDescription>
           </div>
         </div>
       </CardHeader>

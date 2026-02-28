@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview An AI-powered FAQ tool for Laxmidhar College Connect.
+ * @fileOverview An AI-powered FAQ tool for Laxmidhar Polytechnic College Connect.
  *
  * - answerFaqQuestion - A function that handles answering common college-related questions.
  * - FaqQuestionInput - The input type for the answerFaqQuestion function.
@@ -11,7 +11,7 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const FaqQuestionInputSchema = z.object({
-  question: z.string().describe('The user\'s question about Laxmidhar College Connect.'),
+  question: z.string().describe('The user\'s question about Laxmidhar Polytechnic College Connect.'),
 });
 export type FaqQuestionInput = z.infer<typeof FaqQuestionInputSchema>;
 
@@ -28,13 +28,13 @@ const faqPrompt = ai.definePrompt({
   name: 'faqPrompt',
   input: { schema: FaqQuestionInputSchema },
   output: { schema: FaqQuestionOutputSchema },
-  prompt: `You are an AI assistant for Laxmidhar College Connect. Your role is to provide accurate and helpful information about the college's admissions, academic programs, and general college details.
+  prompt: `You are an AI assistant for Laxmidhar Polytechnic College Connect. Your role is to provide accurate and helpful information about the college's admissions, academic programs, and general college details.
 
 Use the following information to answer the user's questions:
 
-### Laxmidhar College Connect Information:
+### Laxmidhar Polytechnic College Information:
 
-**College Name:** Laxmidhar College Connect
+**College Name:** Laxmidhar Polytechnic College
 **Mission/Vision:** To provide quality technical education and foster innovation, preparing students for successful careers.
 **Location:** 1N-3 MIA RIICO, Near IET College, Mungaska, Alwar-301001, Rajasthan
 
