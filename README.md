@@ -2,28 +2,30 @@
 
 This is a NextJS application for Laxmidhar Polytechnic College, built with React, Tailwind CSS, and Firebase.
 
-## Deployment & Pricing
+## 🚀 Free Deployment Guide (Vercel)
 
-To host this website on your own domain, it is optimized for **Firebase App Hosting**.
+Since this app uses Next.js server features (Server Actions and AI), traditional static hosting won't work. **Vercel** offers a completely free tier for individual/hobby projects that supports these features.
 
-### 1. Pricing Plan Requirement
-Because this is a full-stack Next.js application (using Server Actions and AI features), it requires compute resources that are part of the **Blaze (Pay-as-you-go) plan**. 
-* **Note:** While the Blaze plan requires a credit card for identity verification, it includes a generous **Free Tier**. Most small-to-medium college websites stay within these free limits and incur $0 or very minimal monthly charges.
+### 1. Deploy for $0
+1. Create a free account at [Vercel.com](https://vercel.com).
+2. Push your code to a **GitHub** repository.
+3. In Vercel, click "New Project" and import your GitHub repo.
+4. **Environment Variables:** You must add your Firebase config keys and Genkit/Gemini API keys in the Vercel dashboard under "Settings" > "Environment Variables" so the AI works.
+5. Click **Deploy**. Vercel will give you a free `your-project.vercel.app` URL.
 
-### 2. How to Publish with a Custom Domain
-1. Go to the [Firebase Console](https://console.firebase.google.com/).
-2. Select your project: `studio-1031981759-820a3`.
-3. If you see an "Upgrade" prompt, switch to the **Blaze Plan**.
-4. In the left-hand menu, go to **Build** > **App Hosting**.
-5. Connect your GitHub repository (if applicable) or follow the setup wizard.
-6. Once deployed, navigate to the **Settings** or **Domains** tab.
-7. Click **Add custom domain** and enter your domain (e.g., `www.yourcollege.com`).
-8. Firebase will provide DNS records (A/AAAA/CNAME). Add these to your domain registrar (GoDaddy, Namecheap, etc.).
+### 2. Connect Your Custom Domain (Free)
+1. In your Vercel project, go to **Settings** > **Domains**.
+2. Enter your custom domain (e.g., `www.yourcollege.com`).
+3. Vercel will provide DNS records (A record and CNAME). Add these to your domain registrar (GoDaddy, Namecheap, etc.).
+4. **SSL is Free:** Vercel automatically generates and renews a free SSL certificate (HTTPS) for your domain.
 
-### 3. Free SSL Certificate
-Once your DNS records are verified:
-* Firebase provisions a **free SSL certificate** (HTTPS) automatically.
-* It may take 24-48 hours for global DNS propagation.
+## Why Vercel?
+- **No Credit Card Required:** The Hobby plan does not require a payment method to start.
+- **Serverless Functions:** It runs your Genkit AI flows and login logic for free within their fair-use limits.
+- **Global CDN:** Your college website will load fast across India.
+
+## Alternative: Firebase App Hosting
+If you prefer to stay within the Firebase ecosystem, you can use **Firebase App Hosting**. Note that this requires switching to the **Blaze (Pay-as-you-go) Plan**. While it has a free tier, it requires a credit card for identity verification. For a 100% "no card" experience, use Vercel.
 
 ## Features
 - **AI FAQ Assistant:** Integrated Genkit/Gemini AI for student inquiries.
@@ -36,5 +38,3 @@ To run the project locally:
 npm install
 npm run dev
 ```
-
-The AI-powered FAQ tool logic is defined in `src/ai/flows/ai-powered-faq-tool-flow.ts`.
