@@ -2,8 +2,8 @@
   "placeholderImages": [
     {
       "id": "hero-college",
-      "description": "Laxmidhar Polytechnic College main campus building in Alwar",
-      "imageUrl": "https://images.unsplash.com/photo-1617584387223-5dd8f36511a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2xsZWdlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzcyMTkzNjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Laxmidhar Polytechnic College main campus building and lush green lawns",
+      "imageUrl": "https://images.unsplash.com/photo-1592066575517-58df903152f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzcyMTkzNjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "college building"
     },
     {
@@ -32,9 +32,9 @@
     },
     {
       "id": "students-campus",
-      "description": "Students at Laxmidhar Polytechnic College Alwar campus",
-      "imageUrl": "https://images.unsplash.com/photo-1709085783594-666111a690d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNhbXB1c3xlbnwwfHx8fDE3NzIyMTQ3NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "students campus"
+      "description": "The expansive campus grounds of Laxmidhar Polytechnic College",
+      "imageUrl": "https://images.unsplash.com/photo-1763890699288-e34cad0e221f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYW1wdXMlMjBsYXdufGVufDB8fHx8MTc3MjI2ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "campus lawn"
     },
     {
       "id": "mechanical-eng",
