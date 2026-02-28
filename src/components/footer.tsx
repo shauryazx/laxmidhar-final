@@ -10,8 +10,8 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-accent">Laxmidhar Polytechnic College</h3>
             <p className="text-sm leading-relaxed text-background/70 mb-4">
-              Providing quality technical education and fostering innovation for over two decades in Alwar. 
-              Our mission is to prepare students for successful engineering careers through practical learning.
+              A premier institution dedicated to technical proficiency and vocational innovation in Alwar. 
+              Preparing future engineering professionals for over two decades.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-accent transition-colors"><Facebook className="h-5 w-5" /></Link>
@@ -23,30 +23,30 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">Portals</h3>
             <ul className="space-y-2 text-sm text-background/70">
-              <li><Link href="/about" className="hover:text-accent transition-colors">About History</Link></li>
-              <li><Link href="/programs" className="hover:text-accent transition-colors">Diploma Programs</Link></li>
-              <li><Link href="/admissions" className="hover:text-accent transition-colors">Admission Portal</Link></li>
-              <li><Link href="/disclosure" className="hover:text-accent transition-colors">AICTE Disclosure</Link></li>
-              <li><Link href="/faq" className="hover:text-accent transition-colors">AI Assistant</Link></li>
+              <li><Link href="/about" className="hover:text-accent transition-colors">College Profile</Link></li>
+              <li><Link href="/programs" className="hover:text-accent transition-colors">Academic Streams</Link></li>
+              <li><Link href="/admissions" className="hover:text-accent transition-colors">Enrollment Center</Link></li>
+              <li><Link href="/disclosure" className="hover:text-accent transition-colors">Mandatory Disclosures</Link></li>
+              <li><Link href="/login" className="hover:text-accent transition-colors">Student Login</Link></li>
             </ul>
           </div>
 
           {/* Academic Desks */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Administration</h3>
+            <h3 className="text-lg font-bold mb-4">Leadership</h3>
             <ul className="space-y-2 text-sm text-background/70">
-              <li><Link href="/desk/chairman" className="hover:text-accent transition-colors">Chairman's Desk</Link></li>
+              <li><Link href="/desk/chairman" className="hover:text-accent transition-colors">Chairman's Perspective</Link></li>
               <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Director's Message</Link></li>
-              <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Principal's Insights</Link></li>
-              <li><Link href="/desk/hod" className="hover:text-accent transition-colors">HOD Engineering</Link></li>
+              <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Principal's Desk</Link></li>
+              <li><Link href="/desk/hod" className="hover:text-accent transition-colors">Heads of Departments</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-4">Campus Reach</h3>
             <ul className="space-y-4 text-sm text-background/70">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent shrink-0" />
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-xs text-background/40">
-          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College Connect. All Rights Reserved. AICTE Approved & Affiliated.</p>
+          <p>&copy; {new Date().getFullYear()} Laxmidhar Polytechnic College. All Rights Reserved. AICTE Approved & BTER Affiliated.</p>
         </div>
       </div>
     </footer>
