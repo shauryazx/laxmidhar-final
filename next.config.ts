@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'crowded-copper-ywf9xzrzlg.edgeone.app',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
