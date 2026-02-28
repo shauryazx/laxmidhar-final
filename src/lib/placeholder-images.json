@@ -3,56 +3,56 @@
     {
       "id": "hero-college",
       "description": "Laxmidhar Polytechnic College main campus building in Alwar",
-      "imageUrl": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBjb2xsZWdlfGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian college"
+      "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "college building"
     },
     {
       "id": "engineering-lab",
       "description": "Technical engineering laboratory at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1580982328660-293810b76efd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlbmdpbmVlcmluZyUyMGxhYm9yYXRvcnl8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "engineering laboratory"
+      "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "engineering lab"
     },
     {
       "id": "chairman-portrait",
       "description": "Chairman Mahendra Singh Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1620025939271-47be27b7449c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian professional"
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "indian businessman"
     },
     {
       "id": "director-portrait",
       "description": "Director Nirma Choudhary of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1596283850353-2f01e339f734?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian professional"
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "business woman"
     },
     {
       "id": "principal-portrait",
       "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1758685734408-19dd0cc86d2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhY2FkZW1pYyUyMHByb2Zlc3NvcnxlbnwwfHx8fDE3NzIyMDI3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "academic professor"
+      "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "professor portrait"
     },
     {
       "id": "students-campus",
       "description": "Students at Laxmidhar Polytechnic College Alwar campus",
-      "imageUrl": "https://images.unsplash.com/photo-1569173675610-42c361a86e37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBzdHVkZW50c3xlbnwwfHx8fDE3NzIyNjYyMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian students"
+      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "college students"
     },
     {
       "id": "mechanical-eng",
       "description": "Mechanical Engineering workshop at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1761519609252-3b868e540398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWNoYW5pY2FsJTIwd29ya3Nob3B8ZW58MHx8fHwxNzcyMjY2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "imageHint": "mechanical workshop"
     },
     {
       "id": "electrical-eng",
       "description": "Electrical Engineering lab equipment at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1668036268099-9d6b38c7f791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwbGFifGVufDB8fHx8MTc3MjI2NjIwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "electrical lab"
+      "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "electrical engineering"
     },
     {
       "id": "civil-eng",
       "description": "Civil Engineering construction models at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1599995903128-531fc7fb694b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjI0MzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "construction site"
+      "imageUrl": "https://images.unsplash.com/photo-1503387762-592dea58ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "civil construction"
     }
   ]
 }
