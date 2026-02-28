@@ -27,7 +27,7 @@
     {
       "id": "principal-portrait",
       "description": "Principal Shahkool Khan of Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw8fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzIyNTMwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
@@ -38,9 +38,9 @@
     },
     {
       "id": "mechanical-eng",
-      "description": "Advanced mechanical workshop and industrial machinery at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwd29ya3Nob3B8ZW58MHx8fHwxNzcyMjY2MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mechanical workshop"
+      "description": "Technical mechanical engineering blueprints and gear designs",
+      "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbmdpbmVlcmluZyUyMGJsdWVwcmludHxlbnwwfHx8fDE3NzIyNjYwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineering blueprint"
     },
     {
       "id": "electrical-eng",
@@ -51,7 +51,7 @@
     {
       "id": "civil-eng",
       "description": "Civil Engineering construction and architectural planning at Laxmidhar Polytechnic College",
-      "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc3MjI0MzQ4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1503387762-592dea58ef23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXZpbCUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc3MjI2NjA1OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "construction site"
     }
   ]
