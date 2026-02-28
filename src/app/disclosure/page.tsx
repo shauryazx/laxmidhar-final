@@ -4,6 +4,15 @@ import { ShieldCheck, FileText, Download, Landmark, ExternalLink } from "lucide-
 import { Button } from "@/components/ui/button";
 
 export default function DisclosurePage() {
+  const documentation = [
+    { title: "AICTE Approval Letter (Current Year)", url: "https://www.aicte-india.org/" },
+    { title: "Anti-Ragging Committee Details", url: "https://bter.rajasthan.gov.in/" },
+    { title: "Grievance Redressal Mechanism", url: "https://bter.rajasthan.gov.in/" },
+    { title: "Internal Complaint Committee", url: "https://bter.rajasthan.gov.in/" },
+    { title: "SC/ST Committee Setup", url: "https://bter.rajasthan.gov.in/" },
+    { title: "Library & Lab Resources Disclosure", url: "https://bter.rajasthan.gov.in/" }
+  ];
+
   return (
     <div className="pb-20">
       <div className="bg-primary text-primary-foreground py-20 mb-16">
@@ -68,18 +77,13 @@ export default function DisclosurePage() {
             <h2 className="text-3xl font-bold">Public Documentation</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "AICTE Approval Letter (Current Year)",
-              "Anti-Ragging Committee Details",
-              "Grievance Redressal Mechanism",
-              "Internal Complaint Committee",
-              "SC/ST Committee Setup",
-              "Library & Lab Resources Disclosure"
-            ].map((doc, i) => (
+            {documentation.map((doc, i) => (
               <div key={i} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl border border-transparent hover:border-primary/20 transition-all">
-                <span className="text-sm font-semibold">{doc}</span>
-                <Button size="icon" variant="ghost" className="text-primary hover:text-accent">
-                  <Download className="h-5 w-5" />
+                <span className="text-sm font-semibold">{doc.title}</span>
+                <Button size="icon" variant="ghost" className="text-primary hover:text-accent" asChild>
+                  <a href={doc.url} target="_blank" rel="noopener noreferrer" title="View Document">
+                    <Download className="h-5 w-5" />
+                  </a>
                 </Button>
               </div>
             ))}
