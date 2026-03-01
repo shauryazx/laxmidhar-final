@@ -10,7 +10,10 @@ Since this app uses Next.js server features (Server Actions and AI), traditional
 1. Create a free account at [Vercel.com](https://vercel.com).
 2. Push your code to a **GitHub** repository.
 3. In Vercel, click "New Project" and import your GitHub repo.
-4. **Environment Variables:** You must add your Firebase config keys and Genkit/Gemini API keys in the Vercel dashboard under "Settings" > "Environment Variables" so the AI works.
+4. **Environment Variables:** You MUST add the following keys in the Vercel dashboard under "Settings" > "Environment Variables":
+   - `GOOGLE_GENAI_API_KEY`: Your Gemini API Key from Google AI Studio.
+   - `RESEND_API_KEY`: Your API Key from Resend.com (for contact emails).
+   - Your Firebase config keys (if manually configuring).
 5. Click **Deploy**. Vercel will give you a free `your-project.vercel.app` URL.
 
 ## 📥 How to Get Your Code
@@ -23,7 +26,8 @@ To run the project on your own computer:
 1. Extract the downloaded ZIP.
 2. Open your terminal in that folder.
 3. Run `npm install` to install dependencies.
-4. Run `npm run dev` to start the local server at `http://localhost:3000`.
+4. Create a `.env.local` file with your `GOOGLE_GENAI_API_KEY`.
+5. Run `npm run dev` to start the local server at `http://localhost:3000`.
 
 ## Features
 - **AI FAQ Assistant:** Integrated Genkit/Gemini AI for student inquiries.
