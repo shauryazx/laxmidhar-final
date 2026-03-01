@@ -4,7 +4,6 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
-import { AIChatPopup } from '@/components/ai-chat-popup';
 
 // The official LPC logo URL provided by the user
 const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
@@ -45,7 +44,6 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
-          <AIChatPopup />
           <Footer />
           <Toaster />
         </FirebaseClientProvider>
