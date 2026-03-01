@@ -6,14 +6,12 @@ import { Button } from "@/components/ui/button";
 export default function DisclosurePage() {
   // Categorized documentation data
   const documentation = [
-    { title: "EOA Report 2025-26", url: "EOA-Report-2025-26", category: "Regulatory" },
-    { title: "AICTE Approval Letter (Current Year)", url: "/aicte-approval.pdf", category: "Regulatory" },
+    { title: "AICTE Approval Letter (Current Year)", url: "EOA-Report-2025-26.pdf", category: "Regulatory" },
     { title: "Anti-Ragging Committee Details", url: "/Anti-ragging-committed.pdf", category: "Committees" },
     { title: "Grievance Redressal Mechanism", url: "/grievance-redressal.pdf", category: "Committees" },
     { title: "Internal Complaint Committee", url: "/internal-committee.pdf", category: "Committees" },
     { title: "SC/ST Committee Setup", url: "/sc-st_committee.pdf", category: "Committees" },
-    { title: "All Room/Faculty/Area Detail", url: "/all-room-faculty-arae-detail", category: "Infrastructure" },
-    { title: "Library & Lab Resources Disclosure", url: "/library-lab-resources.pdf", category: "Infrastructure" }
+    { title: "Library & Lab Resources Disclosure", url: "/all-room-faculty-arae-detail.pdf", category: "Infrastructure" }
   ];
 
   const regulatoryDocs = documentation.filter(d => d.category === "Regulatory");
@@ -125,9 +123,9 @@ export default function DisclosurePage() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Mechanical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">60</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Civil Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">60</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold py-5">Electrical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">60</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Mechanical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">90</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Civil Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">45</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold py-5">Electrical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">90</TableCell></TableRow>
                 </TableBody>
               </Table>
             </CardContent>

@@ -8,7 +8,7 @@ const programs = [
   {
     id: "mechanical-eng",
     name: "Mechanical Engineering",
-    seats: 60,
+    seats: 90,
     duration: "3 Years (6 Semesters)",
     description: "Focuses on the design, analysis, manufacturing, and maintenance of mechanical systems.",
     highlights: ["CAD/CAM Design", "Thermodynamics Lab", "Fluid Mechanics", "Production Tech"],
@@ -17,7 +17,7 @@ const programs = [
   {
     id: "electrical-eng",
     name: "Electrical Engineering",
-    seats: 60,
+    seats: 90,
     duration: "3 Years (6 Semesters)",
     description: "Covers electricity, electronics, and electromagnetism applied to power systems and circuits.",
     highlights: ["Power Systems", "Control Systems", "Electrical Machines", "Digital Electronics"],
@@ -26,7 +26,7 @@ const programs = [
   {
     id: "civil-eng",
     name: "Civil Engineering",
-    seats: 60,
+    seats: 45,
     duration: "3 Years (6 Semesters)",
     description: "Deals with design, construction, and maintenance of the physical and natural environment.",
     highlights: ["Structural Analysis", "Surveying", "Concrete Technology", "AutoCAD Civil"],
