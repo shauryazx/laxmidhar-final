@@ -6,12 +6,14 @@ import { Button } from "@/components/ui/button";
 export default function DisclosurePage() {
   // Categorized documentation data
   const documentation = [
-    { title: "AICTE Approval Letter (Current Year)", url: "#", category: "Regulatory" },
-    { title: "Anti-Ragging Committee Details", url: "#", category: "Committees" },
-    { title: "Grievance Redressal Mechanism", url: "#", category: "Committees" },
-    { title: "Internal Complaint Committee", url: "#", category: "Committees" },
-    { title: "SC/ST Committee Setup", url: "#", category: "Committees" },
-    { title: "Library & Lab Resources Disclosure", url: "#", category: "Infrastructure" }
+    { title: "EOA Report 2025-26", url: "#", category: "Regulatory" },
+    { title: "AICTE Approval Letter (Current Year)", url: "/aicte-approval.pdf", category: "Regulatory" },
+    { title: "Anti-Ragging Committee Details", url: "/Anti-ragging-committed.pdf", category: "Committees" },
+    { title: "Grievance Redressal Mechanism", url: "/grievance-redressal.pdf", category: "Committees" },
+    { title: "Internal Complaint Committee", url: "/internal-committee.pdf", category: "Committees" },
+    { title: "SC/ST Committee Setup", url: "/sc-st_committee.pdf", category: "Committees" },
+    { title: "All Room/Faculty/Area Detail", url: "#", category: "Infrastructure" },
+    { title: "Library & Lab Resources Disclosure", url: "/library-lab-resources.pdf", category: "Infrastructure" }
   ];
 
   const regulatoryDocs = documentation.filter(d => d.category === "Regulatory");
@@ -31,7 +33,7 @@ export default function DisclosurePage() {
           </div>
         </div>
         <div className="bg-accent/10 px-4 py-2 rounded-full text-accent-foreground text-xs font-black uppercase tracking-widest border border-accent/20">
-          Updated for 2024-25
+          Updated for 2025-26
         </div>
       </div>
       
