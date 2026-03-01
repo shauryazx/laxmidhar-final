@@ -4,6 +4,7 @@ import { ShieldCheck, FileText, Download, Landmark, ExternalLink } from "lucide-
 import { Button } from "@/components/ui/button";
 
 export default function DisclosurePage() {
+  // These URLs should be replaced with the direct Firebase Storage Download URLs
   const documentation = [
     { title: "AICTE Approval Letter (Current Year)", url: "#" },
     { title: "Anti-Ragging Committee Details", url: "#" },
@@ -53,7 +54,7 @@ export default function DisclosurePage() {
             ))}
           </div>
           <p className="mt-6 text-center text-xs text-muted-foreground font-medium">
-            Click any document to open or download in a new tab. All documents are in PDF format.
+            Click any document to open it in a new tab. All documents are provided in PDF format for institutional transparency.
           </p>
         </section>
 
