@@ -7,15 +7,21 @@ import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { AIChatPopup } from '@/components/ai-chat-popup';
 
 // The official LPC logo URL with a higher cache-busting version query to force update
-const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png?v=4";
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png?v=5";
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
   description: 'Welcome to Laxmidhar Polytechnic College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
   icons: {
-    icon: logoUrl,
-    shortcut: logoUrl,
-    apple: logoUrl,
+    icon: [
+      { url: logoUrl, type: 'image/png' },
+      { url: logoUrl, sizes: '32x32', type: 'image/png' },
+      { url: logoUrl, sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: [logoUrl],
+    apple: [
+      { url: logoUrl, sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -30,10 +36,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        {/* Force browser to see the new favicon link */}
-        <link rel="icon" href={logoUrl} type="image/png" />
-        <link rel="shortcut icon" href={logoUrl} />
-        <link rel="apple-touch-icon" href={logoUrl} />
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen flex flex-col">
         <FirebaseClientProvider>
