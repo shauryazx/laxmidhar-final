@@ -25,7 +25,7 @@ export default function DisclosurePage() {
       </div>
 
       <div className="container mx-auto px-4 space-y-16">
-        {/* Public Documentation Section - Styled to match screenshot */}
+        {/* Public Documentation Section */}
         <section className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-border/50">
           <div className="flex items-center gap-4 mb-10">
             <div className="bg-primary/10 p-3 rounded-2xl">
@@ -36,9 +36,12 @@ export default function DisclosurePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {documentation.map((doc, i) => (
-              <div 
+              <a 
                 key={i} 
-                className="group flex items-center justify-between p-6 bg-muted/20 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-lg transition-all cursor-pointer"
+                href={doc.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-6 bg-muted/20 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-lg transition-all"
               >
                 <span className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors leading-tight pr-4">
                   {doc.title}
@@ -46,9 +49,12 @@ export default function DisclosurePage() {
                 <div className="text-primary opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all">
                   <Download className="h-5 w-5" />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
+          <p className="mt-6 text-center text-xs text-muted-foreground font-medium">
+            Click any document to open or download. All documents are in PDF format.
+          </p>
         </section>
 
         {/* Tables Section */}
