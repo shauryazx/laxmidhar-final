@@ -11,6 +11,7 @@ import { useFirestore } from "@/firebase";
 import { collection } from "firebase/firestore";
 import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
 import { useToast } from "@/hooks/use-toast";
+import { sendInquiryEmailAction } from "@/app/actions/contact";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,11 +42,24 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
+      const submittedAt = new Date().toISOString();
+      
+      // 1. Save to Firestore for administrative records (Client-side)
       const colRef = collection(db, "contactInquiries");
       addDocumentNonBlocking(colRef, {
         ...formData,
-        submittedAt: new Date().toISOString()
+        submittedAt
       });
+      
+      // 2. Send email notification (Server Action)
+      const emailResult = await sendInquiryEmailAction({
+        ...formData,
+        submittedAt
+      });
+
+      if (!emailResult.success) {
+        console.warn("Email notification failed, but data was saved to database.");
+      }
       
       setIsSuccess(true);
       toast({
@@ -69,7 +83,7 @@ export default function ContactPage() {
       });
     } finally {
       setIsSubmitting(false);
-      // Optional: keep success message for a few seconds
+      // Keep success message for a few seconds
       setTimeout(() => setIsSuccess(false), 5000);
     }
   };
