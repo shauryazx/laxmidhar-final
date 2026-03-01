@@ -2,32 +2,40 @@
 
 This is a NextJS application for Laxmidhar Polytechnic College, built with React, Tailwind CSS, and Firebase.
 
+## 🚀 Getting the AI Assistant Working (Production)
+
+Your AI FAQ Assistant requires a Google Gemini API Key to work on the live website.
+
+### 1. Get your API Key
+1. Go to [Google AI Studio](https://aistudio.google.com/).
+2. Click **"Get API key"** on the left.
+3. Click **"Create API key in new project"** and copy the key.
+
+### 2. Set Environment Variables
+You must add this key to your hosting provider's dashboard:
+- **Variable Name:** `GOOGLE_GENAI_API_KEY`
+- **Value:** [Your Copied Key]
+
+---
+
 ## 🚀 Free Deployment Guide (Vercel)
 
 Since this app uses Next.js server features (Server Actions and AI), traditional static hosting won't work. **Vercel** offers a completely free tier for individual/hobby projects that supports these features.
 
-### 1. Deploy for $0
+### Deployment Steps:
 1. Create a free account at [Vercel.com](https://vercel.com).
 2. Push your code to a **GitHub** repository.
 3. In Vercel, click "New Project" and import your GitHub repo.
-4. **Environment Variables:** You MUST add the following keys in the Vercel dashboard under "Settings" > "Environment Variables":
-   - `GOOGLE_GENAI_API_KEY`: Your Gemini API Key from Google AI Studio.
-   - `RESEND_API_KEY`: Your API Key from Resend.com (for contact emails).
-   - Your Firebase config keys (if manually configuring).
-5. Click **Deploy**. Vercel will give you a free `your-project.vercel.app` URL.
-
-## 📥 How to Get Your Code
-Since this is a full-stack Next.js project and not a single HTML file, you need the entire folder structure to run it locally.
-- **Option 1:** Use the "Export" or "Download" feature in your current editor's file menu to get a ZIP of the source.
-- **Option 2:** Connect this workspace to a GitHub repository to sync your changes and clone them anywhere.
+4. **Environment Variables:** Add `GOOGLE_GENAI_API_KEY` in the Vercel dashboard under "Settings" > "Environment Variables".
+5. Click **Deploy**.
 
 ## 🛠 Local Development
 To run the project on your own computer:
-1. Extract the downloaded ZIP.
+1. Download the source code ZIP.
 2. Open your terminal in that folder.
 3. Run `npm install` to install dependencies.
-4. Create a `.env.local` file with your `GOOGLE_GENAI_API_KEY`.
-5. Run `npm run dev` to start the local server at `http://localhost:3000`.
+4. Create a `.env` file and add: `GOOGLE_GENAI_API_KEY=your_key_here`
+5. Run `npm run dev` to start the local server at `http://localhost:9002`.
 
 ## Features
 - **AI FAQ Assistant:** Integrated Genkit/Gemini AI for student inquiries.
