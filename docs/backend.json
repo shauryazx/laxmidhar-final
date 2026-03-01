@@ -1,3 +1,4 @@
+
 {
   "entities": {
     "User": {
@@ -388,6 +389,22 @@
         "documentUrl",
         "publicationDate"
       ]
+    },
+    "ContactInquiry": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactInquiry",
+      "type": "object",
+      "description": "Represents a student inquiry submitted through the contact form.",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "branch": { "type": "string" },
+        "message": { "type": "string" },
+        "submittedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fullName", "phone", "email", "branch", "submittedAt"]
     }
   },
   "auth": {
@@ -405,13 +422,19 @@
           "schema": {
             "$ref": "#/backend/entities/User"
           },
-          "description": "Stores individual user profiles. Read/write access is restricted to the owner (`request.auth.uid == userId`), facilitating secure sign-up and login functionality.",
-          "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user, corresponding to Firebase Authentication UID."
-            }
-          ]
+          "description": "Stores individual user profiles.",
+          "params": [{ "name": "userId", "description": "The unique identifier of the user." }]
+        }
+      },
+      {
+        "path": "/contactInquiries/{inquiryId}",
+        "definition": {
+          "entityName": "ContactInquiry",
+          "schema": {
+            "$ref": "#/backend/entities/ContactInquiry"
+          },
+          "description": "Stores student inquiries from the contact form. Publicly writable (for submission), admin readable.",
+          "params": [{ "name": "inquiryId", "description": "The unique identifier for the inquiry." }]
         }
       },
       {
@@ -421,13 +444,8 @@
           "schema": {
             "$ref": "#/backend/entities/StaffMember"
           },
-          "description": "Publicly accessible profiles and messages of key college staff (Chairman, Director, Principal, HODs). Supports easy retrieval for 'HODs Desk' and 'Chairman's Desk' features. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "staffMemberId",
-              "description": "The unique identifier for a staff member."
-            }
-          ]
+          "description": "Publicly accessible profiles and messages of key college staff.",
+          "params": [{ "name": "staffMemberId", "description": "The unique identifier for a staff member." }]
         }
       },
       {
@@ -437,13 +455,8 @@
           "schema": {
             "$ref": "#/backend/entities/Department"
           },
-          "description": "Publicly accessible information about academic departments. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "departmentId",
-              "description": "The unique identifier for an academic department."
-            }
-          ]
+          "description": "Publicly accessible information about academic departments.",
+          "params": [{ "name": "departmentId", "description": "The unique identifier for an academic department." }]
         }
       },
       {
@@ -453,13 +466,8 @@
           "schema": {
             "$ref": "#/backend/entities/Program"
           },
-          "description": "Publicly accessible details of academic programs offered, including descriptions, eligibility, and admission processes. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "programId",
-              "description": "The unique identifier for an academic program."
-            }
-          ]
+          "description": "Publicly accessible details of academic programs offered.",
+          "params": [{ "name": "programId", "description": "The unique identifier for an academic program." }]
         }
       },
       {
@@ -469,13 +477,8 @@
           "schema": {
             "$ref": "#/backend/entities/NewsArticle"
           },
-          "description": "Publicly accessible news articles and announcements. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "newsArticleId",
-              "description": "The unique identifier for a news article or announcement."
-            }
-          ]
+          "description": "Publicly accessible news articles and announcements.",
+          "params": [{ "name": "newsArticleId", "description": "The unique identifier for a news article or announcement." }]
         }
       },
       {
@@ -485,13 +488,8 @@
           "schema": {
             "$ref": "#/backend/entities/Event"
           },
-          "description": "Publicly accessible details of college events. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "eventId",
-              "description": "The unique identifier for an event."
-            }
-          ]
+          "description": "Publicly accessible details of college events.",
+          "params": [{ "name": "eventId", "description": "The unique identifier for an event." }]
         }
       },
       {
@@ -501,13 +499,8 @@
           "schema": {
             "$ref": "#/backend/entities/FAQ"
           },
-          "description": "Publicly accessible frequently asked questions and answers, powering the AI-Powered FAQ Tool. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "faqId",
-              "description": "The unique identifier for an FAQ entry."
-            }
-          ]
+          "description": "Publicly accessible frequently asked questions and answers.",
+          "params": [{ "name": "faqId", "description": "The unique identifier for an FAQ entry." }]
         }
       },
       {
@@ -517,13 +510,8 @@
           "schema": {
             "$ref": "#/backend/entities/CollegeDetail"
           },
-          "description": "A singleton collection holding general college information (mission, vision, history, contact, location). Expected to have a single document (e.g., ID 'main'). Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "collegeDetailId",
-              "description": "The unique identifier for the college details (e.g., 'main' for the singleton document)."
-            }
-          ]
+          "description": "A singleton collection holding general college information.",
+          "params": [{ "name": "collegeDetailId", "description": "The unique identifier for the college details." }]
         }
       },
       {
@@ -533,16 +521,11 @@
           "schema": {
             "$ref": "#/backend/entities/MandatoryDisclosure"
           },
-          "description": "Publicly accessible mandatory disclosure documents required by regulatory bodies like AICTE. Read access is public, write access is restricted to administrators.",
-          "params": [
-            {
-              "name": "disclosureId",
-              "description": "The unique identifier for a mandatory disclosure document."
-            }
-          ]
+          "description": "Publicly accessible mandatory disclosure documents.",
+          "params": [{ "name": "disclosureId", "description": "The unique identifier for a mandatory disclosure document." }]
         }
       }
     ],
-    "reasoning": "The Firestore structure for Laxmidhar College Connect is designed with a strong emphasis on Authorization Independence, Structural Segregation, and DBAC, as mandated by the core design principles.\n\n**Authorization Independence:** All public-facing content entities (StaffMember, Department, Program, NewsArticle, Event, FAQ, CollegeDetail, MandatoryDisclosure) are placed in root-level collections. This ensures their read access is uniform and globally available, eliminating any need for `get()` calls in security rules to determine read permissions. For write operations on these public collections, authorization relies on a dedicated `admin_roles` collection (e.g., `/admin_roles/{uid}`). An administrator's permission is determined by the *existence* of their UID in this collection, not by attributes denormalized within the content documents themselves. This allows for atomic write operations and simplifies rule logic, as rules only need to check `request.auth.uid == resource.id` for user profiles or `exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid))` for administrative actions. No content document needs to denormalize a 'members' map or 'ownerId' for *its own* read/write authorization, as the security posture is either 'publicly readable, admin writable' or 'user-owned private'.\n\n**Query Against Paths (QAPs):**\n1.  **Public Content Collections:** Collections like `/newsArticles`, `/events`, `/programs`, etc., are designed for homogeneous security posture. All documents within these collections are publicly readable. This allows for efficient and secure `list` queries (e.g., `db.collection('newsArticles').get()`) directly from the client without any rule filtering, as the entire collection is intended to be visible. Write access for these collections will be restricted to authenticated administrators, ensuring content integrity while supporting public reads.\n2.  **User Profiles:** The `/users/{userId}` collection uses path-based ownership. A user can only access (`get`, `list` their own, `create`, `update`, `delete`) their document if `request.auth.uid == userId`. This ensures that `list` operations attempting to retrieve other users' profiles will fail, enforcing QAP for private user data.\n3.  **Admin Roles:** The `/admin_roles/{uid}` collection is primarily for `exists()` checks in security rules. While it could technically be listed by authorized entities, its primary use case is to provide a fast, independent check for administrative privileges, thus supporting QAP by clearly defining who has elevated access without filtering content.\n\n**Structural Segregation:** Each entity type with a distinct security requirement is housed in its own top-level collection. User profiles are segregated into `/users`, and all public college information (Staff, Departments, Programs, News, Events, etc.) resides in separate, dedicated collections, each globally readable. This clear separation makes security rules highly readable and easy to debug, as rules for one collection do not depend on the data or permissions of another through complex `get()` calls.\n\n**DBAC:** The `admin_roles` collection implements Database Access Control (DBAC) for administrative privileges. This avoids custom claims, as all role information is stored directly in the database and can be checked using `exists()` in security rules."
+    "reasoning": "Standardized schema for all college entities including a new ContactInquiry collection for the inquiry form."
   }
 }

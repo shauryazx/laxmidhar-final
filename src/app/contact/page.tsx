@@ -1,10 +1,79 @@
+
+'use client';
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, Send, Landmark, Smartphone } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Landmark, Smartphone, Loader2, CheckCircle } from "lucide-react";
+import { useFirestore } from "@/firebase";
+import { collection } from "firebase/firestore";
+import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const db = useFirestore();
+  const { toast } = useToast();
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    branch: "Select Branch",
+    message: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.fullName || !formData.phone || !formData.email || formData.branch === "Select Branch") {
+      toast({
+        variant: "destructive",
+        title: "Missing Information",
+        description: "Please fill in all required fields and select a branch.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const colRef = collection(db, "contactInquiries");
+      addDocumentNonBlocking(colRef, {
+        ...formData,
+        submittedAt: new Date().toISOString()
+      });
+      
+      setIsSuccess(true);
+      toast({
+        title: "Inquiry Sent",
+        description: "Thank you for your interest. We will contact you shortly.",
+      });
+      
+      // Reset form
+      setFormData({
+        fullName: "",
+        phone: "",
+        email: "",
+        branch: "Select Branch",
+        message: ""
+      });
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Submission Error",
+        description: error.message || "Failed to send inquiry.",
+      });
+    } finally {
+      setIsSubmitting(false);
+      // Optional: keep success message for a few seconds
+      setTimeout(() => setIsSuccess(false), 5000);
+    }
+  };
+
   return (
     <div className="pb-20">
       <div className="bg-primary text-primary-foreground py-24 mb-16">
@@ -76,25 +145,48 @@ export default function ContactPage() {
               <CardTitle className="text-3xl font-extrabold text-primary">Admission Inquiry Form</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-xs font-black uppercase tracking-widest text-muted-foreground/60">Full Name</label>
-                    <Input placeholder="Enter your name" className="bg-muted/30 border-none rounded-xl h-12" />
+                    <Input 
+                      placeholder="Enter your name" 
+                      className="bg-muted/30 border-none rounded-xl h-12" 
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black uppercase tracking-widest text-muted-foreground/60">Phone Number</label>
-                    <Input placeholder="Enter your mobile" className="bg-muted/30 border-none rounded-xl h-12" />
+                    <Input 
+                      placeholder="Enter your mobile" 
+                      className="bg-muted/30 border-none rounded-xl h-12" 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      required
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-muted-foreground/60">Email Address</label>
-                  <Input type="email" placeholder="example@mail.com" className="bg-muted/30 border-none rounded-xl h-12" />
+                  <Input 
+                    type="email" 
+                    placeholder="example@mail.com" 
+                    className="bg-muted/30 border-none rounded-xl h-12" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-muted-foreground/60">Branch of Interest</label>
-                  <select className="flex h-12 w-full rounded-xl border-none bg-muted/30 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary font-bold">
-                    <option>Select Branch</option>
+                  <select 
+                    className="flex h-12 w-full rounded-xl border-none bg-muted/30 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary font-bold"
+                    value={formData.branch}
+                    onChange={(e) => setFormData({...formData, branch: e.target.value})}
+                  >
+                    <option disabled>Select Branch</option>
                     <option>Electrical Engineering</option>
                     <option>Civil Engineering</option>
                     <option>Mechanical Engineering</option>
@@ -102,10 +194,25 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-muted-foreground/60">Your Inquiry</label>
-                  <Textarea placeholder="Ask about fees, scholarship, or lateral entry..." className="min-h-[120px] bg-muted/30 border-none rounded-xl p-4" />
+                  <Textarea 
+                    placeholder="Ask about fees, scholarship, or lateral entry..." 
+                    className="min-h-[120px] bg-muted/30 border-none rounded-xl p-4" 
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  />
                 </div>
-                <Button className="w-full bg-primary text-primary-foreground py-8 text-lg font-black rounded-xl flex items-center gap-3 shadow-xl hover:scale-[1.02] transition-transform">
-                  Submit Inquiry <Send className="h-5 w-5" />
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-primary-foreground py-8 text-lg font-black rounded-xl flex items-center gap-3 shadow-xl hover:scale-[1.02] transition-transform"
+                >
+                  {isSubmitting ? (
+                    <>Sending... <Loader2 className="h-5 w-5 animate-spin" /></>
+                  ) : isSuccess ? (
+                    <>Sent Successfully <CheckCircle className="h-5 w-5" /></>
+                  ) : (
+                    <>Submit Inquiry <Send className="h-5 w-5" /></>
+                  )}
                 </Button>
               </form>
             </CardContent>
