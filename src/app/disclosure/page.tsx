@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 
 export default function DisclosurePage() {
   const documentation = [
-    { title: "AICTE Approval Letter (Current Year)", url: "https://www.aicte-india.org/" },
-    { title: "Anti-Ragging Committee Details", url: "https://bter.rajasthan.gov.in/" },
-    { title: "Grievance Redressal Mechanism", url: "https://bter.rajasthan.gov.in/" },
-    { title: "Internal Complaint Committee", url: "https://bter.rajasthan.gov.in/" },
-    { title: "SC/ST Committee Setup", url: "https://bter.rajasthan.gov.in/" },
-    { title: "Library & Lab Resources Disclosure", url: "https://bter.rajasthan.gov.in/" }
+    { title: "AICTE Approval Letter (Current Year)", url: "#" },
+    { title: "Anti-Ragging Committee Details", url: "#" },
+    { title: "Grievance Redressal Mechanism", url: "#" },
+    { title: "Internal Complaint Committee", url: "#" },
+    { title: "SC/ST Committee Setup", url: "#" },
+    { title: "Library & Lab Resources Disclosure", url: "#" }
   ];
 
   return (
@@ -24,74 +24,82 @@ export default function DisclosurePage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 space-y-12">
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="border-none shadow-xl bg-white overflow-hidden">
-            <CardHeader className="bg-muted/50 border-b">
-              <CardTitle className="flex items-center gap-2 text-primary">
-                <Landmark className="h-5 w-5" /> Institutional Details
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <Table>
-                <TableBody>
-                  <TableRow><TableCell className="font-bold">Institute Name</TableCell><TableCell>Laxmidhar Polytechnic College</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Affiliation</TableCell><TableCell>BTER Jodhpur, Rajasthan</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Address</TableCell><TableCell>IN-3, M.I.A., RIICO, Alwar-301030</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Email</TableCell><TableCell>laxmindharpoly@gmail.com</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Chairman</TableCell><TableCell>Mahendra Singh Choudhary</TableCell></TableRow>
-                  <TableRow><TableCell className="font-bold">Reg. No.</TableCell><TableCell>13/alwar/1999</TableCell></TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-
-          <Card className="border-none shadow-xl bg-white overflow-hidden">
-            <CardHeader className="bg-muted/50 border-b">
-              <CardTitle className="flex items-center gap-2 text-primary">
-                <ShieldCheck className="h-5 w-5" /> Programs & Intake
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Program Name</TableHead>
-                    <TableHead>Duration</TableHead>
-                    <TableHead>Intake</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow><TableCell>Mechanical Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell>60</TableCell></TableRow>
-                  <TableRow><TableCell>Civil Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell>60</TableCell></TableRow>
-                  <TableRow><TableCell>Electrical Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell>60</TableCell></TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-border">
-          <div className="flex items-center gap-3 mb-8">
-            <FileText className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold">Public Documentation</h2>
+      <div className="container mx-auto px-4 space-y-16">
+        {/* Public Documentation Section - Styled to match screenshot */}
+        <section className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-border/50">
+          <div className="flex items-center gap-4 mb-10">
+            <div className="bg-primary/10 p-3 rounded-2xl">
+              <FileText className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-4xl font-black text-primary tracking-tight">Public Documentation</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {documentation.map((doc, i) => (
-              <div key={i} className="flex items-center justify-between p-4 bg-muted/30 rounded-xl border border-transparent hover:border-primary/20 transition-all">
-                <span className="text-sm font-semibold">{doc.title}</span>
-                <Button size="icon" variant="ghost" className="text-primary hover:text-accent" asChild>
-                  <a href={doc.url} target="_blank" rel="noopener noreferrer" title="View Document">
-                    <Download className="h-5 w-5" />
-                  </a>
-                </Button>
+              <div 
+                key={i} 
+                className="group flex items-center justify-between p-6 bg-muted/20 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-lg transition-all cursor-pointer"
+              >
+                <span className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors leading-tight pr-4">
+                  {doc.title}
+                </span>
+                <div className="text-primary opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all">
+                  <Download className="h-5 w-5" />
+                </div>
               </div>
             ))}
           </div>
         </section>
 
+        {/* Tables Section */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="border-none shadow-xl bg-white overflow-hidden rounded-[2rem]">
+            <CardHeader className="bg-muted/30 border-b p-8">
+              <CardTitle className="flex items-center gap-3 text-primary text-2xl font-bold">
+                <Landmark className="h-6 w-6" /> Institutional Details
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <Table>
+                <TableBody>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Institute Name</TableCell><TableCell className="font-bold">Laxmidhar Polytechnic College</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Affiliation</TableCell><TableCell className="font-bold">BTER Jodhpur, Rajasthan</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Address</TableCell><TableCell className="font-bold text-xs leading-relaxed">IN-3, M.I.A., RIICO, Alwar-301030</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Email</TableCell><TableCell className="font-bold text-primary">laxmindharpoly@gmail.com</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Chairman</TableCell><TableCell className="font-bold">Mahendra Singh Choudhary</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold text-muted-foreground uppercase text-[10px] tracking-widest">Reg. No.</TableCell><TableCell className="font-bold">13/alwar/1999</TableCell></TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-xl bg-white overflow-hidden rounded-[2rem]">
+            <CardHeader className="bg-muted/30 border-b p-8">
+              <CardTitle className="flex items-center gap-3 text-primary text-2xl font-bold">
+                <ShieldCheck className="h-6 w-6" /> Programs & Intake
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <Table>
+                <TableHeader>
+                  <TableRow className="hover:bg-transparent">
+                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black">Program Name</TableHead>
+                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black">Duration</TableHead>
+                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black">Intake</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow className="hover:bg-transparent"><TableCell className="font-bold">Mechanical Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell className="font-black text-accent">60</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent"><TableCell className="font-bold">Civil Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell className="font-black text-accent">60</TableCell></TableRow>
+                  <TableRow className="hover:bg-transparent"><TableCell className="font-bold">Electrical Eng.</TableCell><TableCell>3 Yrs</TableCell><TableCell className="font-black text-accent">60</TableCell></TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        </section>
+
         <div className="text-center p-8">
-          <Button variant="outline" className="gap-2 border-primary text-primary hover:bg-primary hover:text-white" asChild>
+          <Button variant="outline" className="gap-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl font-bold" asChild>
             <a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">
               Official AICTE Website <ExternalLink className="h-4 w-4" />
             </a>

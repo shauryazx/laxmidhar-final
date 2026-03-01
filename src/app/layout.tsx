@@ -6,15 +6,20 @@ import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { AIChatPopup } from '@/components/ai-chat-popup';
 
-// The official LPC logo URL with a higher cache-busting version query to force update
-const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png?v=6";
+// The official LPC logo URL
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
+  description: 'Approved by AICTE & Affiliated to BTER Jodhpur. Leading polytechnic college in Alwar, Rajasthan.',
   icons: {
-    icon: '/favicon.png',    // Points to your public folder
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: [
+      { url: logoUrl, sizes: '32x32', type: 'image/png' },
+      { url: logoUrl, sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: logoUrl, sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -29,8 +34,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        {/* Explicitly defining the icon in the head for better browser compatibility */}
-        <link rel="icon" href={logoUrl} type="image/png" />
+        {/* Explicit favicon links to override browser cache */}
+        <link rel="icon" href={`${logoUrl}?v=7`} type="image/png" />
+        <link rel="shortcut icon" href={`${logoUrl}?v=7`} type="image/png" />
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen flex flex-col">
         <FirebaseClientProvider>
