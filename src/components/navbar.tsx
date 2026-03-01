@@ -12,7 +12,8 @@ import {
   Phone, 
   UserRound, 
   Menu,
-  X
+  X,
+  ShieldCheck
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -28,13 +29,13 @@ const navItems = [
   { name: "About Us", href: "/about", icon: Info },
   { name: "Programs", href: "/programs", icon: GraduationCap },
   { name: "Admissions", href: "/admissions", icon: BookOpen },
+  { name: "Disclosure", href: "/disclosure", icon: ShieldCheck },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
 
 const adminItems = [
   { name: "Chairman's Desk", href: "/desk/chairman" },
   { name: "HODs Desk", href: "/desk/hod" },
-  { name: "Disclosure", href: "/disclosure" },
 ];
 
 export function Navbar() {
