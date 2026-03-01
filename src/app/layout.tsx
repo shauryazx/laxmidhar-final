@@ -11,17 +11,10 @@ const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.p
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
-  description: 'Welcome to Laxmidhar Polytechnic College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
   icons: {
-    icon: [
-      { url: logoUrl, type: 'image/png' },
-      { url: logoUrl, sizes: '32x32', type: 'image/png' },
-      { url: logoUrl, sizes: '16x16', type: 'image/png' },
-    ],
-    shortcut: [logoUrl],
-    apple: [
-      { url: logoUrl, sizes: '180x180', type: 'image/png' },
-    ],
+    icon: '/favicon.png',    // Points to your public folder
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
