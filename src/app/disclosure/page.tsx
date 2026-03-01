@@ -53,7 +53,7 @@ export default function DisclosurePage() {
             ))}
           </div>
           <p className="mt-6 text-center text-xs text-muted-foreground font-medium">
-            Click any document to open or download. All documents are in PDF format.
+            Click any document to open or download in a new tab. All documents are in PDF format.
           </p>
         </section>
 
