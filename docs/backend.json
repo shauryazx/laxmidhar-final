@@ -389,22 +389,6 @@
         "documentUrl",
         "publicationDate"
       ]
-    },
-    "ContactInquiry": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "ContactInquiry",
-      "type": "object",
-      "description": "Represents a student inquiry submitted through the contact form.",
-      "properties": {
-        "id": { "type": "string" },
-        "fullName": { "type": "string" },
-        "phone": { "type": "string" },
-        "email": { "type": "string", "format": "email" },
-        "branch": { "type": "string" },
-        "message": { "type": "string" },
-        "submittedAt": { "type": "string", "format": "date-time" }
-      },
-      "required": ["fullName", "phone", "email", "branch", "submittedAt"]
     }
   },
   "auth": {
@@ -424,17 +408,6 @@
           },
           "description": "Stores individual user profiles.",
           "params": [{ "name": "userId", "description": "The unique identifier of the user." }]
-        }
-      },
-      {
-        "path": "/contactInquiries/{inquiryId}",
-        "definition": {
-          "entityName": "ContactInquiry",
-          "schema": {
-            "$ref": "#/backend/entities/ContactInquiry"
-          },
-          "description": "Stores student inquiries from the contact form. Publicly writable (for submission), admin readable.",
-          "params": [{ "name": "inquiryId", "description": "The unique identifier for the inquiry." }]
         }
       },
       {
@@ -526,6 +499,6 @@
         }
       }
     ],
-    "reasoning": "Standardized schema for all college entities including a new ContactInquiry collection for the inquiry form."
+    "reasoning": "Removed ContactInquiry entity and collection as the enquiry form has been removed from the application."
   }
 }
