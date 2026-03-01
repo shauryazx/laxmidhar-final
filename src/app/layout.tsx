@@ -6,18 +6,16 @@ import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { AIChatPopup } from '@/components/ai-chat-popup';
 
-// The official LPC logo URL with a cache-busting version query
-const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png?v=3";
+// The official LPC logo URL with a higher cache-busting version query to force update
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png?v=4";
 
 export const metadata: Metadata = {
   title: 'Laxmidhar Polytechnic College | Premier Engineering Diploma Institute',
   description: 'Welcome to Laxmidhar Polytechnic College, providing excellence in technical education with Diploma programs in Civil, Mechanical, and Electrical Engineering.',
   icons: {
-    icon: [
-      { url: logoUrl, type: 'image/png' },
-    ],
-    shortcut: [logoUrl],
-    apple: [logoUrl],
+    icon: logoUrl,
+    shortcut: logoUrl,
+    apple: logoUrl,
   },
 };
 
@@ -32,7 +30,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        {/* Explicitly setting the favicon in the head with direct links to force browser refresh */}
+        {/* Force browser to see the new favicon link */}
         <link rel="icon" href={logoUrl} type="image/png" />
         <link rel="shortcut icon" href={logoUrl} />
         <link rel="apple-touch-icon" href={logoUrl} />
