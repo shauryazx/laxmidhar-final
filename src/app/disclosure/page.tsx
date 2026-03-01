@@ -4,7 +4,7 @@ import { ShieldCheck, FileText, Download, Landmark, ExternalLink, FileDown } fro
 import { Button } from "@/components/ui/button";
 
 export default function DisclosurePage() {
-  // Replace the '#' with your Google Drive "Anyone with the link" URLs
+  // Categorized documentation data
   const documentation = [
     { title: "AICTE Approval Letter (Current Year)", url: "#", category: "Regulatory" },
     { title: "Anti-Ragging Committee Details", url: "#", category: "Committees" },
@@ -14,67 +14,76 @@ export default function DisclosurePage() {
     { title: "Library & Lab Resources Disclosure", url: "#", category: "Infrastructure" }
   ];
 
+  const regulatoryDocs = documentation.filter(d => d.category === "Regulatory");
+  const committeeDocs = documentation.filter(d => d.category === "Committees");
+  const infraDocs = documentation.filter(d => d.category === "Infrastructure");
+
+  const DocBlock = ({ title, docs, icon: Icon }: { title: string, docs: typeof documentation, icon: any }) => (
+    <section className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/40">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <div className="flex items-center gap-4">
+          <div className="bg-primary/10 p-4 rounded-2xl shadow-inner">
+            <Icon className="h-8 w-8 text-primary" />
+          </div>
+          <div>
+            <h2 className="text-3xl font-black text-primary tracking-tight">{title}</h2>
+            <p className="text-sm text-muted-foreground font-medium">Download official {title.toLowerCase()} records</p>
+          </div>
+        </div>
+        <div className="bg-accent/10 px-4 py-2 rounded-full text-accent-foreground text-xs font-black uppercase tracking-widest border border-accent/20">
+          Updated for 2024-25
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {docs.map((doc, i) => (
+          <a 
+            key={i} 
+            href={doc.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex flex-col p-8 bg-muted/20 rounded-[2rem] border-2 border-transparent hover:border-primary/30 hover:bg-white hover:shadow-2xl transition-all duration-300"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <span className="text-[10px] font-black uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded-md">
+                {doc.category}
+              </span>
+              <div className="text-primary/40 group-hover:text-primary transition-colors">
+                <FileDown className="h-5 w-5" />
+              </div>
+            </div>
+            <h3 className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors leading-snug">
+              {doc.title}
+            </h3>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+
   return (
     <div className="pb-20">
       <div className="bg-primary text-primary-foreground py-20 mb-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Mandatory Disclosure</h1>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-            In compliance with AICTE norms, Laxmidhar Polytechnic College maintains full transparency regarding our infrastructure, faculty, and institutional records.
+            In compliance with AICTE norms, Laxmidhar Polytechnic College maintains full transparency regarding our records and governance.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 space-y-16">
-        {/* Public Documentation Section */}
-        <section className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/40">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-4 rounded-2xl shadow-inner">
-                <FileText className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-black text-primary tracking-tight">Public Documentation</h2>
-                <p className="text-sm text-muted-foreground font-medium">Download official institutional certificates and records</p>
-              </div>
-            </div>
-            <div className="bg-accent/10 px-4 py-2 rounded-full text-accent-foreground text-xs font-black uppercase tracking-widest border border-accent/20">
-              Updated for 2024-25
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {documentation.map((doc, i) => (
-              <a 
-                key={i} 
-                href={doc.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col p-6 bg-muted/20 rounded-[1.5rem] border-2 border-transparent hover:border-primary/30 hover:bg-white hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded-md">
-                    {doc.category}
-                  </span>
-                  <div className="text-primary opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all">
-                    <FileDown className="h-6 w-6" />
-                  </div>
-                </div>
-                <h3 className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors leading-snug mb-2">
-                  {doc.title}
-                </h3>
-                <div className="mt-auto flex items-center gap-2 text-[10px] font-black uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                  View Document <ExternalLink className="h-3 w-3" />
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="mt-10 p-6 bg-primary/5 rounded-2xl border border-primary/10 text-center">
-            <p className="text-sm text-muted-foreground font-medium flex items-center justify-center gap-2">
-              <Download className="h-4 w-4 text-primary" /> Documents will open in a new browser window/tab for secure viewing.
-            </p>
-          </div>
-        </section>
+        {/* Separate Blocks for Categories */}
+        <DocBlock title="Regulatory Approvals" docs={regulatoryDocs} icon={Landmark} />
+        <DocBlock title="Committees & Governance" docs={committeeDocs} icon={ShieldCheck} />
+        <DocBlock title="Infrastructure Resources" docs={infraDocs} icon={FileText} />
+
+        {/* Info Box */}
+        <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10 text-center">
+          <p className="text-sm text-muted-foreground font-medium flex items-center justify-center gap-2">
+            <Download className="h-4 w-4 text-primary" /> Documents will open in a new browser window/tab for secure viewing.
+          </p>
+        </div>
 
         {/* Institutional Tables */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -122,14 +131,6 @@ export default function DisclosurePage() {
             </CardContent>
           </Card>
         </section>
-
-        <div className="text-center pt-10">
-          <Button variant="outline" className="h-14 px-8 gap-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-2xl font-black transition-all shadow-lg hover:shadow-primary/20" asChild>
-            <a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">
-              Official AICTE Portal <ExternalLink className="h-5 w-5" />
-            </a>
-          </Button>
-        </div>
       </div>
     </div>
   );
