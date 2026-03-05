@@ -1,136 +1,159 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ShieldCheck, FileText, Download, Landmark, ExternalLink, FileDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Landmark, FileText, Download, ShieldCheck, Users, Building2, Lightbulb } from "lucide-react";
 
 export default function DisclosurePage() {
-  // Categorized documentation data
-  const documentation = [
-    { title: "AICTE Approval Letter (Current Year)", url: "EOA-Report-2025-26.pdf", category: "Regulatory" },
-    { title: "Anti-Ragging Committee Details", url: "/Anti-ragging-committed.pdf", category: "Committees" },
-    { title: "Grievance Redressal Mechanism", url: "/grievance-redressal.pdf", category: "Committees" },
-    { title: "Internal Complaint Committee", url: "/internal-committee.pdf", category: "Committees" },
-    { title: "SC/ST Committee Setup", url: "/sc-st_committee.pdf", category: "Committees" },
-    { title: "Library & Lab Resources Disclosure", url: "/all-room-faculty-arae-detail.pdf", category: "Infrastructure" }
+  const disclosureSections = [
+    {
+      title: "Summary of Mandatory Disclosures (Annexure 10)",
+      icon: FileText,
+      docs: [
+        { name: "Mandatory Disclosure Report 2024-25", url: "#" },
+        { name: "Annexure 10 Detailed Compliance", url: "#" },
+      ]
+    },
+    {
+      title: "Regulatory Approvals",
+      icon: Landmark,
+      docs: [
+        { name: "EOA Report 2025-26", url: "/EOA-Report-2025-26.pdf" },
+        { name: "AICTE Extension of Approval (Previous Year)", url: "#" },
+      ]
+    },
+    {
+      title: "Infrastructure & Faculty Details",
+      icon: Building2,
+      docs: [
+        { name: "All Room / Faculty / Area Details", url: "/all-room-faculty-arae-detail.pdf" },
+        { name: "Laboratory Resources & Equipment Details", url: "#" },
+        { name: "Library Resources & e-Journal Details", url: "#" },
+      ]
+    },
+    {
+      title: "Grievance Redressal Committee",
+      icon: ShieldCheck,
+      docs: [
+        { name: "Grievance Redressal Mechanism Notification", url: "/grievance-redressal.pdf" },
+        { name: "Committee Members & Contact Details", url: "#" },
+      ]
+    },
+    {
+      title: "Committee for SC & ST Students",
+      icon: Users,
+      docs: [
+        { name: "SC/ST Committee Constitution", url: "/sc-st_committee.pdf" },
+        { name: "Action Plan & Support Services", url: "#" },
+      ]
+    },
+    {
+      title: "Internal Complaint Committee",
+      icon: ShieldCheck,
+      docs: [
+        { name: "Internal Complaint Committee (ICC) Setup", url: "/internal-committee.pdf" },
+        { name: "Anti-Sexual Harassment Policy", url: "#" },
+      ]
+    },
+    {
+      title: "Entrepreneurship Development Cell",
+      icon: Lightbulb,
+      docs: [
+        { name: "EDC Establishment & Objectives", url: "#" },
+        { name: "EDC Activities & Student Initiatives", url: "#" },
+      ]
+    }
   ];
 
-  const regulatoryDocs = documentation.filter(d => d.category === "Regulatory");
-  const committeeDocs = documentation.filter(d => d.category === "Committees");
-  const infraDocs = documentation.filter(d => d.category === "Infrastructure");
-
-  const DocBlock = ({ title, docs, icon: Icon }: { title: string, docs: typeof documentation, icon: any }) => (
-    <section className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-border/40">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-        <div className="flex items-center gap-4">
-          <div className="bg-primary/10 p-4 rounded-2xl shadow-inner">
-            <Icon className="h-8 w-8 text-primary" />
-          </div>
-          <div>
-            <h2 className="text-3xl font-black text-primary tracking-tight">{title}</h2>
-            <p className="text-sm text-muted-foreground font-medium">Download official {title.toLowerCase()} records</p>
-          </div>
-        </div>
-        <div className="bg-accent/10 px-4 py-2 rounded-full text-accent-foreground text-xs font-black uppercase tracking-widest border border-accent/20">
-          Updated for 2025-26
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {docs.map((doc, i) => (
-          <a 
-            key={i} 
-            href={doc.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex flex-col p-8 bg-muted/20 rounded-[2rem] border-2 border-transparent hover:border-primary/30 hover:bg-white hover:shadow-2xl transition-all duration-300"
-          >
-            <div className="flex items-start justify-between mb-4">
-              <span className="text-[10px] font-black uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded-md">
-                {doc.category}
-              </span>
-              <div className="text-primary/40 group-hover:text-primary transition-colors">
-                <FileDown className="h-5 w-5" />
-              </div>
-            </div>
-            <h3 className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors leading-snug">
-              {doc.title}
-            </h3>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-
   return (
-    <div className="pb-20">
-      <div className="bg-primary text-primary-foreground py-20 mb-16">
+    <div className="pb-20 bg-muted/30 min-h-screen">
+      <div className="bg-primary text-primary-foreground py-16 mb-12 shadow-md">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Mandatory Disclosure</h1>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-            In compliance with AICTE norms, Laxmidhar Polytechnic College maintains full transparency regarding our records and governance.
+          <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight uppercase">Mandatory Disclosure</h1>
+          <p className="text-primary-foreground/80 max-w-2xl mx-auto text-sm md:text-base font-medium">
+            Official records and regulatory documentation as per AICTE and BTER Jodhpur norms.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 space-y-16">
-        {/* Separate Blocks for Categories */}
-        <DocBlock title="Regulatory Approvals" docs={regulatoryDocs} icon={Landmark} />
-        <DocBlock title="Committees & Governance" docs={committeeDocs} icon={ShieldCheck} />
-        <DocBlock title="Infrastructure Resources" docs={infraDocs} icon={FileText} />
+      <div className="container mx-auto px-4 max-w-5xl space-y-8">
+        {/* Institutional Profile Summary */}
+        <Card className="border-none shadow-lg overflow-hidden rounded-xl">
+          <CardHeader className="bg-white border-b py-4">
+            <CardTitle className="text-lg font-bold flex items-center gap-2 text-primary">
+              <Landmark className="h-5 w-5" /> General Information
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            <Table>
+              <TableBody>
+                <TableRow className="hover:bg-transparent">
+                  <TableCell className="font-bold w-1/3 bg-muted/10">Institute Name</TableCell>
+                  <TableCell>Laxmidhar Polytechnic College</TableCell>
+                </TableRow>
+                <TableRow className="hover:bg-transparent">
+                  <TableCell className="font-bold bg-muted/10">Location</TableCell>
+                  <TableCell>IN-3, M.I.A., RIICO, Alwar (Raj.)</TableCell>
+                </TableRow>
+                <TableRow className="hover:bg-transparent">
+                  <TableCell className="font-bold bg-muted/10">AICTE Region</TableCell>
+                  <TableCell>North-Western</TableCell>
+                </TableRow>
+                <TableRow className="hover:bg-transparent">
+                  <TableCell className="font-bold bg-muted/10">Affiliation</TableCell>
+                  <TableCell>BTER Jodhpur, Rajasthan</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
 
-        {/* Info Box */}
-        <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10 text-center">
-          <p className="text-sm text-muted-foreground font-medium flex items-center justify-center gap-2">
-            <Download className="h-4 w-4 text-primary" /> Documents will open in a new browser window/tab for secure viewing.
-          </p>
-        </div>
-
-        {/* Institutional Tables */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <Card className="border-none shadow-2xl bg-white overflow-hidden rounded-[2.5rem]">
-            <CardHeader className="bg-primary p-8 text-primary-foreground">
-              <CardTitle className="flex items-center gap-3 text-2xl font-black tracking-tight">
-                <Landmark className="h-7 w-7 text-accent" /> Institutional Profile
+        {/* Disclosure Tables */}
+        {disclosureSections.map((section, idx) => (
+          <Card key={idx} className="border-none shadow-lg overflow-hidden rounded-xl">
+            <CardHeader className="bg-white border-b py-4">
+              <CardTitle className="text-lg font-bold flex items-center gap-2 text-primary">
+                <section.icon className="h-5 w-5 text-accent" />
+                {section.title}
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-4 pt-8">
+            <CardContent className="p-0">
               <Table>
-                <TableBody>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Institute Name</TableCell><TableCell className="font-bold text-primary">Laxmidhar Polytechnic College</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Affiliation</TableCell><TableCell className="font-bold">BTER Jodhpur, Rajasthan</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Approval</TableCell><TableCell className="font-bold">AICTE New Delhi</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Email</TableCell><TableCell className="font-bold text-primary">laxmindharpoly@gmail.com</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Chairman</TableCell><TableCell className="font-bold">Mahendra Singh Choudhary</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-black text-muted-foreground uppercase text-[10px] tracking-widest py-4">Registration</TableCell><TableCell className="font-bold">13/alwar/1999</TableCell></TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-
-          <Card className="border-none shadow-2xl bg-white overflow-hidden rounded-[2.5rem]">
-            <CardHeader className="bg-accent p-8 text-accent-foreground">
-              <CardTitle className="flex items-center gap-3 text-2xl font-black tracking-tight">
-                <ShieldCheck className="h-7 w-7 text-primary" /> Course Matrix
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-4 pt-8">
-              <Table>
-                <TableHeader>
-                  <TableRow className="hover:bg-transparent border-b-2 border-muted">
-                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black py-4">Program Name</TableHead>
-                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black py-4">Duration</TableHead>
-                    <TableHead className="text-muted-foreground uppercase text-[10px] font-black py-4 text-right">Intake</TableHead>
+                <TableHeader className="bg-muted/20">
+                  <TableRow>
+                    <TableHead className="w-16 text-center font-bold">S.No</TableHead>
+                    <TableHead className="font-bold">Description of Document</TableHead>
+                    <TableHead className="w-32 text-center font-bold">Action</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Mechanical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">90</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-b border-muted/50"><TableCell className="font-bold py-5">Civil Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">45</TableCell></TableRow>
-                  <TableRow className="hover:bg-transparent border-none"><TableCell className="font-bold py-5">Electrical Engineering</TableCell><TableCell className="font-medium">3 Years</TableCell><TableCell className="font-black text-primary text-right">90</TableCell></TableRow>
+                  {section.docs.map((doc, docIdx) => (
+                    <TableRow key={docIdx} className="hover:bg-primary/5 group">
+                      <TableCell className="text-center font-medium text-muted-foreground">{docIdx + 1}</TableCell>
+                      <TableCell className="font-semibold text-sm">{doc.name}</TableCell>
+                      <TableCell className="text-center">
+                        <a 
+                          href={doc.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors bg-primary/5 px-3 py-1.5 rounded-full"
+                        >
+                          <Download className="h-3 w-3" /> View PDF
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </CardContent>
           </Card>
-        </section>
+        ))}
+
+        {/* Disclaimer Footer */}
+        <div className="text-center pt-8 text-muted-foreground text-xs space-y-2">
+          <p className="flex items-center justify-center gap-2">
+            <ShieldCheck className="h-4 w-4" /> All documents are maintained in accordance with AICTE Process Handbook 2024-25.
+          </p>
+          <p>Last Updated: {new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</p>
+        </div>
       </div>
     </div>
   );
