@@ -1,25 +1,61 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Landmark, ShieldCheck, AlertCircle } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap } from "lucide-react";
+import Link from "next/link";
 
 export default function DisclosurePage() {
+  const disclosureSections = [
+    {
+      title: "Regulatory Approval",
+      icon: ShieldCheck,
+      documents: [
+        { name: "Extension of Approval (EOA) Report 2025-26", filename: "EOA-Report-2025-26.pdf" },
+      ]
+    },
+    {
+      title: "Statutory Committees",
+      icon: Users,
+      documents: [
+        { name: "Grievance Redressal Committee Details", filename: "grievance-redressal.pdf" },
+        { name: "Anti-Ragging Committee & Commitment", filename: "Anti-ragging-committed.pdf" },
+        { name: "Internal Complaint Committee (ICC)", filename: "internal-committee.pdf" },
+        { name: "Committee for SC & ST Students", filename: "sc-st_committee.pdf" },
+      ]
+    },
+    {
+      title: "Infrastructure & Academics",
+      icon: Building2,
+      documents: [
+        { name: "Details of All Rooms, Faculty & Area", filename: "all-room-faculty-arae-detail.pdf" },
+        { name: "Result Analysis & Enrollment of Students", filename: "result-analysis-and-enrollment-students.pdf" },
+      ]
+    },
+    {
+      title: "Placement & Training",
+      icon: GraduationCap,
+      documents: [
+        { name: "Placement & Training Officer Details", filename: "placement-training-officer.pdf" },
+      ]
+    }
+  ];
+
   return (
     <div className="pb-20 bg-muted/30 min-h-screen">
       <div className="bg-primary text-primary-foreground py-16 mb-12 shadow-md">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight uppercase">Mandatory Disclosure</h1>
+          <h1 className="text-3xl md:text-4xl font-black mb-4 tracking-tight uppercase italic">Mandatory Disclosure</h1>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto text-sm md:text-base font-medium">
-            Official records and regulatory documentation as per AICTE and BTER Jodhpur norms.
+            Official records and regulatory documentation maintained in accordance with AICTE & BTER Jodhpur norms.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-5xl space-y-8">
-        {/* Institutional Profile Summary */}
-        <Card className="border-none shadow-lg overflow-hidden rounded-xl">
+      <div className="container mx-auto px-4 max-w-5xl space-y-12">
+        {/* General Info Card */}
+        <Card className="border-none shadow-lg overflow-hidden rounded-2xl">
           <CardHeader className="bg-white border-b py-4">
             <CardTitle className="text-lg font-bold flex items-center gap-2 text-primary">
-              <Landmark className="h-5 w-5" /> General Information
+              <Landmark className="h-5 w-5 text-accent" /> Institutional Profile Summary
             </CardTitle>
           </CardHeader>
           <CardContent className="p-0">
@@ -34,8 +70,8 @@ export default function DisclosurePage() {
                   <TableCell>IN-3, M.I.A., RIICO, Alwar (Raj.)</TableCell>
                 </TableRow>
                 <TableRow className="hover:bg-transparent">
-                  <TableCell className="font-bold bg-muted/10">AICTE Region</TableCell>
-                  <TableCell>North-Western</TableCell>
+                  <TableCell className="font-bold bg-muted/10">AICTE ID</TableCell>
+                  <TableCell>1-3148111 (Reference AICTE Portal)</TableCell>
                 </TableRow>
                 <TableRow className="hover:bg-transparent">
                   <TableCell className="font-bold bg-muted/10">Affiliation</TableCell>
@@ -46,25 +82,51 @@ export default function DisclosurePage() {
           </CardContent>
         </Card>
 
-        {/* Empty State / Coming Soon */}
-        <Card className="border-2 border-dashed border-muted-foreground/20 bg-transparent rounded-2xl p-12 text-center">
-          <div className="flex flex-col items-center justify-center gap-4 text-muted-foreground">
-            <div className="bg-muted p-4 rounded-full">
-              <AlertCircle className="h-10 w-10 opacity-40" />
+        {/* Disclosure Sections */}
+        {disclosureSections.map((section, idx) => (
+          <div key={idx} className="space-y-4">
+            <div className="flex items-center gap-3 border-l-4 border-accent pl-4">
+              <section.icon className="h-6 w-6 text-primary" />
+              <h2 className="text-xl font-black text-primary uppercase tracking-tight">{section.title}</h2>
             </div>
-            <div className="space-y-1">
-              <h3 className="text-xl font-bold text-foreground">Disclosures Pending Update</h3>
-              <p className="text-sm max-w-sm mx-auto">
-                Regulatory documents and committee details for the current academic session are being finalized and will be uploaded shortly.
-              </p>
-            </div>
+            
+            <Card className="border-none shadow-md overflow-hidden rounded-xl">
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader className="bg-muted/50">
+                    <TableRow>
+                      <TableHead className="w-16 text-center font-bold">Sr. No.</TableHead>
+                      <TableHead className="font-bold">Document Description</TableHead>
+                      <TableHead className="text-right font-bold px-6">Action</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {section.documents.map((doc, dIdx) => (
+                      <TableRow key={dIdx} className="hover:bg-muted/20 transition-colors">
+                        <TableCell className="text-center font-medium text-muted-foreground">{dIdx + 1}</TableCell>
+                        <TableCell className="font-bold text-foreground/80">{doc.name}</TableCell>
+                        <TableCell className="text-right px-6">
+                          <Link 
+                            href={`/${doc.filename}`} 
+                            target="_blank"
+                            className="inline-flex items-center gap-2 text-xs font-black bg-primary/10 text-primary px-3 py-1.5 rounded-lg hover:bg-primary hover:text-white transition-all uppercase tracking-tighter"
+                          >
+                            <Download className="h-3 w-3" /> View PDF
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
           </div>
-        </Card>
+        ))}
 
         {/* Disclaimer Footer */}
-        <div className="text-center pt-8 text-muted-foreground text-xs space-y-2">
+        <div className="text-center pt-8 text-muted-foreground text-[10px] space-y-2 uppercase tracking-[0.2em] opacity-60">
           <p className="flex items-center justify-center gap-2">
-            <ShieldCheck className="h-4 w-4" /> All documents are maintained in accordance with AICTE Process Handbook 2024-25.
+            <FileText className="h-3 w-3" /> All documents are maintained in accordance with AICTE Process Handbook 2025-26.
           </p>
           <p>Last Updated: {new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</p>
         </div>
