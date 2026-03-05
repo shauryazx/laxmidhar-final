@@ -1,46 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Landmark, FileText, ShieldCheck, Users, Building2, Lightbulb, AlertCircle } from "lucide-react";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Landmark, ShieldCheck, AlertCircle } from "lucide-react";
 
 export default function DisclosurePage() {
-  const disclosureSections = [
-    {
-      title: "Summary of Mandatory Disclosures (Annexure 10)",
-      icon: FileText,
-      docs: []
-    },
-    {
-      title: "Regulatory Approvals",
-      icon: Landmark,
-      docs: []
-    },
-    {
-      title: "Infrastructure & Faculty Details",
-      icon: Building2,
-      docs: []
-    },
-    {
-      title: "Grievance Redressal Committee",
-      icon: ShieldCheck,
-      docs: []
-    },
-    {
-      title: "Committee for SC & ST Students",
-      icon: Users,
-      docs: []
-    },
-    {
-      title: "Internal Complaint Committee",
-      icon: ShieldCheck,
-      docs: []
-    },
-    {
-      title: "Entrepreneurship Development Cell",
-      icon: Lightbulb,
-      docs: []
-    }
-  ];
-
   return (
     <div className="pb-20 bg-muted/30 min-h-screen">
       <div className="bg-primary text-primary-foreground py-16 mb-12 shadow-md">
@@ -84,53 +46,20 @@ export default function DisclosurePage() {
           </CardContent>
         </Card>
 
-        {/* Disclosure Tables */}
-        {disclosureSections.map((section, idx) => (
-          <Card key={idx} className="border-none shadow-lg overflow-hidden rounded-xl">
-            <CardHeader className="bg-white border-b py-4">
-              <CardTitle className="text-lg font-bold flex items-center gap-2 text-primary">
-                <section.icon className="h-5 w-5 text-accent" />
-                {section.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              {section.docs.length > 0 ? (
-                <Table>
-                  <TableHeader className="bg-muted/20">
-                    <TableRow>
-                      <TableHead className="w-16 text-center font-bold">S.No</TableHead>
-                      <TableHead className="font-bold">Description of Document</TableHead>
-                      <TableHead className="w-32 text-center font-bold">Action</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {section.docs.map((doc: any, docIdx: number) => (
-                      <TableRow key={docIdx} className="hover:bg-primary/5 group">
-                        <TableCell className="text-center font-medium text-muted-foreground">{docIdx + 1}</TableCell>
-                        <TableCell className="font-semibold text-sm">{doc.name}</TableCell>
-                        <TableCell className="text-center">
-                          <a 
-                            href={doc.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-accent transition-colors bg-primary/5 px-3 py-1.5 rounded-full"
-                          >
-                            View PDF
-                          </a>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              ) : (
-                <div className="p-8 text-center flex flex-col items-center justify-center gap-2 text-muted-foreground">
-                  <AlertCircle className="h-8 w-8 opacity-20" />
-                  <p className="text-sm font-medium">No documents uploaded for this section.</p>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        ))}
+        {/* Empty State / Coming Soon */}
+        <Card className="border-2 border-dashed border-muted-foreground/20 bg-transparent rounded-2xl p-12 text-center">
+          <div className="flex flex-col items-center justify-center gap-4 text-muted-foreground">
+            <div className="bg-muted p-4 rounded-full">
+              <AlertCircle className="h-10 w-10 opacity-40" />
+            </div>
+            <div className="space-y-1">
+              <h3 className="text-xl font-bold text-foreground">Disclosures Pending Update</h3>
+              <p className="text-sm max-w-sm mx-auto">
+                Regulatory documents and committee details for the current academic session are being finalized and will be uploaded shortly.
+              </p>
+            </div>
+          </div>
+        </Card>
 
         {/* Disclaimer Footer */}
         <div className="text-center pt-8 text-muted-foreground text-xs space-y-2">
