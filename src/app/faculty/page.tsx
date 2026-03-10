@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FacultyPage() {
   const facultyDoc = {
     name: "List of Faculty Members & Qualifications",
-    filename: "staff-details.pdf"
+    filename: "staff.pdf"
   };
 
   return (
