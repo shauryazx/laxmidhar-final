@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -13,7 +12,8 @@ import {
   UserRound, 
   Menu,
   X,
-  ShieldCheck
+  ShieldCheck,
+  Users
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -29,6 +29,7 @@ const navItems = [
   { name: "About Us", href: "/about", icon: Info },
   { name: "Programs", href: "/programs", icon: GraduationCap },
   { name: "Admissions", href: "/admissions", icon: BookOpen },
+  { name: "Faculty", href: "/faculty", icon: Users },
   { name: "Disclosure", href: "/disclosure", icon: ShieldCheck },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
