@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap, Gavel, FileSpreadsheet, FileImage } from "lucide-react";
@@ -35,6 +34,8 @@ export default function DisclosurePage() {
       icon: Building2,
       documents: [
         { name: "Details of All Rooms, Faculty & Area", filename: "all-room-faculty-arae-detail.pdf" },
+        { name: "Approved Ground Floor Plan Blueprint", filename: "ground-floor-plan.jpg", isImage: true },
+        { name: "Ground Floor Details", filename: "ground-floor-details.pdf" },
         { name: "Approved First Floor Plan Blueprint", filename: "first-floor-plan.jpg", isImage: true },
         { name: "Result Analysis & Enrollment of Students", filename: "result-analysis-and-enrollment-students.pdf" },
       ]
