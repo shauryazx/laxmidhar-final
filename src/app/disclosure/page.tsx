@@ -21,6 +21,13 @@ export default function DisclosurePage() {
       ]
     },
     {
+      title: "Faculty Details",
+      icon: Users,
+      documents: [
+        { name: "List of Faculty Members & Qualifications", filename: "staff-details.pdf", isInlinePdf: true },
+      ]
+    },
+    {
       title: "Statutory Committees",
       icon: Users,
       documents: [
@@ -137,10 +144,19 @@ export default function DisclosurePage() {
                                 />
                               </div>
                             )}
+                            {doc.isInlinePdf && (
+                              <div className="mt-4 border-2 border-muted rounded-xl overflow-hidden shadow-sm w-full h-[600px] bg-white">
+                                <iframe 
+                                  src={`/${doc.filename}#toolbar=0`} 
+                                  className="w-full h-full border-none"
+                                  title={doc.name}
+                                />
+                              </div>
+                            )}
                           </div>
                         </TableCell>
                         <TableCell className="text-right px-6 align-top pt-6">
-                          {!doc.isImage && (
+                          {!doc.isImage && !doc.isInlinePdf && (
                             <Link 
                               href={`/${doc.filename}`} 
                               target="_blank"
@@ -150,8 +166,14 @@ export default function DisclosurePage() {
                               {doc.isSpreadsheet ? 'Download XLSX' : 'View PDF'}
                             </Link>
                           )}
-                          {doc.isImage && (
-                            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest italic">Displayed Inline</span>
+                          {(doc.isImage || doc.isInlinePdf) && (
+                            <Link 
+                              href={`/${doc.filename}`} 
+                              target="_blank"
+                              className="inline-flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-widest hover:text-primary transition-colors"
+                            >
+                              <Download className="h-3 w-3" /> Download Original
+                            </Link>
                           )}
                         </TableCell>
                       </TableRow>
