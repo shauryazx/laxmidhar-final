@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap, Gavel } from "lucide-react";
+import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap, Gavel, FileSpreadsheet } from "lucide-react";
 import Link from "next/link";
 
 export default function DisclosurePage() {
@@ -9,6 +10,7 @@ export default function DisclosurePage() {
       title: "AICTE Mandate",
       icon: Gavel,
       documents: [
+        { name: "AICTE-MANDATE", filename: "AICTE-MANDATE.xlsx", isSpreadsheet: true },
         { name: "AICTE Process Handbook 2025-26", filename: "aicte-process-handbook.pdf" },
         { name: "Mandatory Disclosure AICTE (Annexure 10)", filename: "mandatory-disclosure-annexure-10.pdf" },
       ]
@@ -109,17 +111,26 @@ export default function DisclosurePage() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {section.documents.map((doc, dIdx) => (
+                    {section.documents.map((doc: any, dIdx) => (
                       <TableRow key={dIdx} className="hover:bg-muted/20 transition-colors">
                         <TableCell className="text-center font-medium text-muted-foreground">{dIdx + 1}</TableCell>
-                        <TableCell className="font-bold text-foreground/80">{doc.name}</TableCell>
+                        <TableCell className="font-bold text-foreground/80">
+                          <div className="flex items-center gap-2">
+                            {doc.isSpreadsheet ? (
+                              <FileSpreadsheet className="h-4 w-4 text-green-600" />
+                            ) : (
+                              <FileText className="h-4 w-4 text-primary" />
+                            )}
+                            {doc.name}
+                          </div>
+                        </TableCell>
                         <TableCell className="text-right px-6">
                           <Link 
                             href={`/${doc.filename}`} 
                             target="_blank"
                             className="inline-flex items-center gap-2 text-xs font-black bg-primary/10 text-primary px-3 py-1.5 rounded-lg hover:bg-primary hover:text-white transition-all uppercase tracking-tighter"
                           >
-                            <Download className="h-3 w-3" /> View PDF
+                            <Download className="h-3 w-3" /> {doc.isSpreadsheet ? 'Download XLSX' : 'View PDF'}
                           </Link>
                         </TableCell>
                       </TableRow>
