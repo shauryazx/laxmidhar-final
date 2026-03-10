@@ -1,10 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap } from "lucide-react";
+import { Landmark, FileText, ShieldCheck, Download, Users, Building2, GraduationCap, Gavel } from "lucide-react";
 import Link from "next/link";
 
 export default function DisclosurePage() {
   const disclosureSections = [
+    {
+      title: "AICTE Mandate",
+      icon: Gavel,
+      documents: [
+        { name: "AICTE Process Handbook 2025-26", filename: "aicte-process-handbook.pdf" },
+        { name: "Mandatory Disclosure AICTE (Annexure 10)", filename: "mandatory-disclosure-annexure-10.pdf" },
+      ]
+    },
     {
       title: "Regulatory Approval",
       icon: ShieldCheck,
