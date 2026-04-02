@@ -39,7 +39,9 @@ export default function DisclosurePage() {
         { name: "Approved Ground Floor Plan Blueprint", filename: "ground floor.jpg.jpeg", isImage: true },
         { name: "Approved First Floor Plan Blueprint", filename: "First.jpg.jpeg", isImage: true },
         { name: "Result Analysis & Enrollment of Students", filename: "result-analysis-and-enrollment-students.pdf" },
+        { name: "Carpet Area Details", filename: "Carpet_Area_Details.pdf" },
       ]
+
     },
     {
       title: "Placement & Training",
