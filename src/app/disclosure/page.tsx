@@ -35,6 +35,7 @@ export default function DisclosurePage() {
       icon: Building2,
       documents: [
         { name: "Details of All Rooms, Faculty & Area", filename: "all-room-faculty-arae-detail.pdf" },
+        { name: "Carpet Area Details", filename: "carpet-area-details.pdf" },
         { name: "Approved Ground Floor Plan Blueprint", filename: "ground floor.jpg.jpeg", isImage: true },
         { name: "Approved First Floor Plan Blueprint", filename: "First.jpg.jpeg", isImage: true },
         { name: "Result Analysis & Enrollment of Students", filename: "result-analysis-and-enrollment-students.pdf" },
