@@ -31,9 +31,11 @@ export function Footer() {
                   className="object-contain"
                 />
               </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-xl font-black text-white uppercase">Laxmidhar Polytechnic College</span>
-                <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Alwar, Rajasthan</span>
+              <div className="flex flex-col leading-[0.9] font-black uppercase tracking-tighter">
+                <span className="text-base text-white">Laxmidhar</span>
+                <span className="text-base text-white">Polytechnic</span>
+                <span className="text-base text-white">College</span>
+                <span className="text-[10px] font-bold text-accent tracking-widest mt-1">Alwar, Rajasthan</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-background/60">
