@@ -55,14 +55,14 @@ export function Navbar() {
               <Image
                 src={logoUrl}
                 alt="LPC Logo"
-                width={80}
-                height={80}
+                width={70}
+                height={70}
                 className="object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-2xl font-black tracking-tighter text-white uppercase">LPC</span>
+              <span className="text-base md:text-xl font-black tracking-tighter text-white uppercase">Laxmidhar Polytechnic College</span>
               <span className="text-[10px] font-bold uppercase text-accent tracking-widest">Alwar, Rajasthan</span>
             </div>
           </Link>

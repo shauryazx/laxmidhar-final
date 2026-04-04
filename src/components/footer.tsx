@@ -32,8 +32,8 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-3xl font-black text-white uppercase">LPC</span>
-                <span className="text-[10px] font-bold text-accent uppercase tracking-tighter">Laxmidhar Polytechnic</span>
+                <span className="text-xl font-black text-white uppercase">Laxmidhar Polytechnic College</span>
+                <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Alwar, Rajasthan</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-background/60">
