@@ -21,13 +21,13 @@ export function Footer() {
           {/* LPC Branding Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 rounded-lg overflow-hidden border border-accent/40 bg-white">
+              <div className="relative h-12 w-12">
                 {logo && (
                   <Image
                     src={logo.imageUrl}
                     alt="LPC Logo"
                     fill
-                    className="object-contain p-1"
+                    className="object-contain"
                   />
                 )}
               </div>

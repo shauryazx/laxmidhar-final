@@ -50,13 +50,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Institutional Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-12 w-12 rounded-lg overflow-hidden border-2 border-accent/40 bg-white shadow-inner">
+            <div className="relative h-14 w-14">
               {logo && (
                 <Image
                   src={logo.imageUrl}
                   alt="LPC Logo"
                   fill
-                  className="object-contain p-0.5"
+                  className="object-contain"
                   priority
                 />
               )}
