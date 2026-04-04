@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Facebook, Twitter, Instagram, Linkedin, Smartphone, MapPin } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
 
 export function Footer() {
   const [year, setYear] = useState<number | null>(null);
-  const logo = PlaceHolderImages.find(img => img.id === 'college-logo');
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -21,15 +21,14 @@ export function Footer() {
           {/* LPC Branding Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12">
-                {logo && (
-                  <Image
-                    src={logo.imageUrl}
-                    alt="LPC Logo"
-                    fill
-                    className="object-contain"
-                  />
-                )}
+              <div className="flex-shrink-0">
+                <Image
+                  src={logoUrl}
+                  alt="LPC Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-2xl font-black text-white">LPC</span>

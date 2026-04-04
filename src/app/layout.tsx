@@ -13,15 +13,12 @@ export const metadata: Metadata = {
   description: 'Approved by AICTE & Affiliated to BTER Jodhpur. Leading polytechnic college in Alwar, Rajasthan.',
   icons: {
     icon: [
+      { url: logoUrl, sizes: '32x32', type: 'image/png' },
+      { url: logoUrl, sizes: '16x16', type: 'image/png' },
       { url: logoUrl, sizes: 'any' },
-      { url: logoUrl, type: 'image/png' },
     ],
-    shortcut: [
-      { url: logoUrl, type: 'image/png' },
-    ],
-    apple: [
-      { url: logoUrl, sizes: '180x180', type: 'image/png' },
-    ],
+    shortcut: logoUrl,
+    apple: logoUrl,
   },
 };
 
@@ -36,9 +33,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        {/* Explicitly defined favicon links for maximum browser compatibility */}
+        {/* Favicon links */}
         <link rel="icon" href={logoUrl} type="image/png" sizes="any" />
-        <link rel="shortcut icon" href={logoUrl} type="image/png" />
         <link rel="apple-touch-icon" href={logoUrl} />
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen flex flex-col">

@@ -23,7 +23,8 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
 
 const navItems = [
   { name: "About Us", href: "/about", icon: Info },
@@ -42,7 +43,6 @@ const adminItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const logo = PlaceHolderImages.find(img => img.id === 'college-logo');
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
@@ -50,16 +50,15 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Institutional Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-14 w-14">
-              {logo && (
-                <Image
-                  src={logo.imageUrl}
-                  alt="LPC Logo"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              )}
+            <div className="flex-shrink-0">
+              <Image
+                src={logoUrl}
+                alt="LPC Logo"
+                width={56}
+                height={56}
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-xl font-black tracking-tighter text-white">LPC</span>
