@@ -20,19 +20,19 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* LPC Branding Section */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="flex-shrink-0">
+            <div className="flex items-center gap-4">
+              <div className="flex-shrink-0 bg-white p-1 rounded-lg">
                 <Image
                   src={logoUrl}
                   alt="LPC Logo"
-                  width={56}
-                  height={56}
+                  width={64}
+                  height={64}
                   className="object-contain"
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-2xl font-black text-white">LPC</span>
-                <span className="text-[8px] font-bold text-accent uppercase tracking-tighter">Laxmidhar Polytechnic</span>
+                <span className="text-3xl font-black text-white">LPC</span>
+                <span className="text-[10px] font-bold text-accent uppercase tracking-tighter">Laxmidhar Polytechnic</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-background/60">

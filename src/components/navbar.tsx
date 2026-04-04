@@ -47,22 +47,22 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Institutional Logo - Rendered clearly without boxed backgrounds */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex-shrink-0 transition-transform group-hover:scale-105">
+        <div className="flex items-center justify-between h-24">
+          {/* Institutional Logo */}
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="flex-shrink-0 transition-transform group-hover:scale-105 bg-white p-1 rounded-lg">
               <Image
                 src={logoUrl}
                 alt="LPC Logo"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
                 className="object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-black tracking-tighter text-white">LPC</span>
-              <span className="text-[8px] font-bold uppercase text-accent tracking-widest">Alwar, Rajasthan</span>
+              <span className="text-2xl font-black tracking-tighter text-white">LPC</span>
+              <span className="text-[10px] font-bold uppercase text-accent tracking-widest">Alwar, Rajasthan</span>
             </div>
           </Link>
 
