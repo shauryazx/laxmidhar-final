@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 
-// The official LPC logo URL provided by the user
+// The official LPC logo URL
 const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
 
 export const metadata: Metadata = {
@@ -13,11 +13,14 @@ export const metadata: Metadata = {
   description: 'Approved by AICTE & Affiliated to BTER Jodhpur. Leading polytechnic college in Alwar, Rajasthan.',
   icons: {
     icon: [
-      { url: `${logoUrl}?v=17`, sizes: 'any' },
-      { url: `${logoUrl}?v=17`, type: 'image/png' },
+      { url: logoUrl, sizes: 'any' },
+      { url: logoUrl, type: 'image/png' },
+    ],
+    shortcut: [
+      { url: logoUrl, type: 'image/png' },
     ],
     apple: [
-      { url: `${logoUrl}?v=17`, sizes: '180x180', type: 'image/png' },
+      { url: logoUrl, sizes: '180x180', type: 'image/png' },
     ],
   },
 };
@@ -33,10 +36,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        {/* Force browser tab logo update with high-priority link tags */}
-        <link rel="icon" href={`${logoUrl}?v=17`} type="image/png" sizes="any" />
-        <link rel="shortcut icon" href={`${logoUrl}?v=17`} type="image/png" />
-        <link rel="apple-touch-icon" href={`${logoUrl}?v=17`} />
+        {/* Explicitly defined favicon links for maximum browser compatibility */}
+        <link rel="icon" href={logoUrl} type="image/png" sizes="any" />
+        <link rel="shortcut icon" href={logoUrl} type="image/png" />
+        <link rel="apple-touch-icon" href={logoUrl} />
       </head>
       <body className="font-body antialiased bg-background text-foreground min-h-screen flex flex-col">
         <FirebaseClientProvider>
