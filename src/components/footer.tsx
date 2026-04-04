@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Facebook, Twitter, Instagram, Linkedin, Smartphone, MapPin } from "lucide-react";
 
-const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
+// Using the local favicon.png for branding consistency
+const logoUrl = "/favicon.png";
 
 export function Footer() {
   const [year, setYear] = useState<number | null>(null);
@@ -21,7 +22,7 @@ export function Footer() {
           {/* LPC Branding Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 bg-white p-1 rounded-lg">
+              <div className="flex-shrink-0">
                 <Image
                   src={logoUrl}
                   alt="LPC Logo"
@@ -31,7 +32,7 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-3xl font-black text-white">LPC</span>
+                <span className="text-3xl font-black text-white uppercase">LPC</span>
                 <span className="text-[10px] font-bold text-accent uppercase tracking-tighter">Laxmidhar Polytechnic</span>
               </div>
             </div>

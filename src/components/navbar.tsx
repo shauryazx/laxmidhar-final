@@ -24,7 +24,8 @@ import {
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 
-const logoUrl = "https://img.sanishtech.com/u/adb9427566dfc9ee201f669961f327ba.png";
+// Using the local favicon.png for branding consistency
+const logoUrl = "/favicon.png";
 
 const navItems = [
   { name: "About Us", href: "/about", icon: Info },
@@ -50,7 +51,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-24">
           {/* Institutional Logo */}
           <Link href="/" className="flex items-center gap-4 group">
-            <div className="flex-shrink-0 transition-transform group-hover:scale-105 bg-white p-1 rounded-lg">
+            <div className="flex-shrink-0 transition-transform group-hover:scale-105">
               <Image
                 src={logoUrl}
                 alt="LPC Logo"
@@ -61,7 +62,7 @@ export function Navbar() {
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-2xl font-black tracking-tighter text-white">LPC</span>
+              <span className="text-2xl font-black tracking-tighter text-white uppercase">LPC</span>
               <span className="text-[10px] font-bold uppercase text-accent tracking-widest">Alwar, Rajasthan</span>
             </div>
           </Link>
