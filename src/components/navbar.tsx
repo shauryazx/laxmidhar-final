@@ -48,14 +48,14 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-primary text-primary-foreground border-b border-primary/20 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Institutional Logo */}
+          {/* Institutional Logo - Rendered clearly without boxed backgrounds */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 transition-transform group-hover:scale-105">
               <Image
                 src={logoUrl}
                 alt="LPC Logo"
-                width={56}
-                height={56}
+                width={60}
+                height={60}
                 className="object-contain"
                 priority
               />

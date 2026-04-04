@@ -33,7 +33,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        {/* Favicon links */}
+        {/* Favicon links for standard and apple touch */}
         <link rel="icon" href={logoUrl} type="image/png" sizes="any" />
         <link rel="apple-touch-icon" href={logoUrl} />
       </head>

@@ -25,8 +25,8 @@ export function Footer() {
                 <Image
                   src={logoUrl}
                   alt="LPC Logo"
-                  width={48}
-                  height={48}
+                  width={56}
+                  height={56}
                   className="object-contain"
                 />
               </div>
