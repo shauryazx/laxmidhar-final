@@ -21,6 +21,13 @@ export default function DisclosurePage() {
       ]
     },
     {
+      title: "Approval Affidavit",
+      icon: FileText,
+      documents: [
+        { name: "Official Approval Affidavit", filename: "Affidavit.pdf" },
+      ]
+    },
+    {
       title: "Statutory Committees",
       icon: Users,
       documents: [
