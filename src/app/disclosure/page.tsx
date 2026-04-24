@@ -14,19 +14,20 @@ export default function DisclosurePage() {
       ]
     },
     {
+      title: "Approval Affidavit",
+      icon: FileText,
+      documents: [
+        { name: "Official Approval Affidavit", filename: "Approval_affidavit.pdf" },
+      ]
+    },
+    {
       title: "Regulatory Approval",
       icon: ShieldCheck,
       documents: [
         { name: "Extension of Approval (EOA) Report 2025-26", filename: "EOA-Report-2025-26.pdf" },
       ]
     },
-    {
-      title: "Approval Affidavit",
-      icon: FileText,
-      documents: [
-        { name: "Official Approval Affidavit", filename: "Affidavit.pdf" },
-      ]
-    },
+ 
     {
       title: "Statutory Committees",
       icon: Users,
